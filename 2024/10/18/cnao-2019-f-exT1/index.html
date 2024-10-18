@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>2019 CNAO Final-ex T2 | スズラン の Garden.</title>
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="A secret home where I can relax." />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>スズラン の GARDEN.</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;スズラン の GARDEN.</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>2019 CNAO Final-ex T2</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/18
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E5%A4%A9%E4%BD%93%E6%B5%8B%E9%87%8F%E5%AD%A6/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                天体测量学
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%9D%90%E6%A0%87%E7%B3%BB/" style="color: #03a9f4">
+                    坐标系
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%A4%A9%E4%BD%93%E8%A7%86%E8%BF%90%E5%8A%A8/" style="color: #00a596">
+                    天体视运动
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="流浪地球。"><a href="#流浪地球。" class="headerlink" title="流浪地球。"></a>流浪地球。</h2><h5 id="Problem："><a href="#Problem：" class="headerlink" title="Problem："></a>Problem：</h5><p>&emsp;&emsp;(低年组、高年组).今年大年初一上映的电影《流浪地球》可谓开启了中国现代科幻电影元年，获得了口碑和票房的双丰收。剧中，重启行星发动机的剧情也让人津津乐道。</p>
+<p>&emsp;&emsp;假设某救援队从位于中国乌鲁木齐的基地出发，开飞机运送火石救援位于印尼苏拉威西的转向发动机，基地位置为：$43\degree51^{\prime}1.95^{\prime\prime}N$，$87\degree34^{\prime}2.54^{\prime\prime}E$；转向发动机位置为：$2\degree23^{\prime}23.64^{\prime\prime}S，119\degree55^{\prime}51.92^{\prime\prime}E$。因为任务紧急，出动救援队过多，基地燃油储备不足，这架飞机必须在途中的补给站进行燃油补给才能飞到印尼。已知在飞行路线附近有两个补给站，一个是重庆补给站,位置为：$29\degree33^{\prime}31.10^{\prime\prime}N，106\degree34^{\prime}10.99^{\prime\prime}E$；另一个是贵阳补给站，位置为$26\degree 34^{\prime}57.54^{\prime\prime}N$，$106\degree42^{\prime}14.84^{\prime\prime}E$，试问应该选择哪个补给站，才能尽可能少绕路?地球可视为球形，请给出你的计算过程。</p>
+<span id="more"></span>
+
+<h5 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h5><p>&emsp;&emsp;通过球面三角，将乌鲁木齐-重庆-苏拉威西这两段大圆弧长之和与乌鲁木齐-贵阳-苏拉威西这两段大圆弧长之和比较即可得出。先把所有的经纬度化为小数度数，便于后续计算。</p>
+<p>&emsp;&emsp;乌鲁木齐基地:$43.850542\degree N$, $87.567372\degree E$.<br>&emsp;&emsp;重庆补给站：$29.558639\degree N$, $106.569719\degree E$.</p>
+<p>&emsp;&emsp;先过北极点、乌鲁木齐、重庆建立球面三角$NWC$。$\angle WNC &#x3D; $乌鲁木齐基地与重庆补给点的经度之差，为$19.002347$。弧$NW$为$90\degree $-乌鲁木齐基地的纬度$&#x3D;46.149458\degree $；弧$NC$为$90\degree -$重庆补给站的纬度$&#x3D;60.441361\degree $。</p>
+<p>&emsp;&emsp;根据边的余弦公式：$\cos a&#x3D;\cos b\cdot \cos c+\sin b\cdot \sin \cdot \cos A$.</p>
+<p>&emsp;&emsp;可得：$\cos WC &#x3D;\cos NW\cdot \cos NC+\sin AW\cdot \sin NC\cdot \cos NC$</p>
+<center> $\cos C=0.692780\times 0.493314+0.721149\times 0.869851\times 0.945505$ </center>
+
+<center> $\Longrightarrow \cos WC=0.341758+0.593108=0.934866$ </center>
+
+<p>&emsp;&emsp;有$WC&#x3D;20.793481\degree $</p>
+<p>&emsp;&emsp;同理，$\angle CNS&#x3D;20.793481\degree $,弧$NC&#x3D;60.441361\degree $,弧$NS&#x3D;90.392400\degree $.</p>
+<center> $\cos CS =\cos NC-\cos NS+\sin NC-\sin AS\cdot \cos \angle CNS $ </center>
+
+<center> $\cos CS=0.493314\times (-0.006849)+0.869851\times 0.999977\times 0.972932 $ </center>
+
+<center> $\Longrightarrow \cos CS=-0.003379+0.846286=-0.842907 $ </center>
+
+<p>&emsp;&emsp;有:$ CS&#x3D;32.551592\degree $,相加得$ 53.345073\degree $.</p>
+<p>&emsp;&emsp;再过北极点、乌鲁木齐、贵阳建立球面三角$NWG$，$\angle WNG&#x3D;19.136750\degree$;弧$NW&#x3D;46.149458\degree $,弧$NW&#x3D;63.417350\degree $.</p>
+<center> $\cos WG=\cos NW\cdot \cos MG+\sin NW\cdot \sin NG\cdot \cos NG $ </center>
+
+<center> $\cos G=0.692780\times 0.447488+0.721149\times 0.894290\times 0.944739 $ </center>
+
+<center> $\cos WG=0.309979+0.609277=0.919256 $ </center>
+
+<p>&emsp;&emsp;有$WG&#x3D;23.182515\degree $。</p>
+<p>&emsp;&emsp;同理，$\angle GNS&#x3D;13.226967\degree $;弧$NG&#x3D;63.417350\degree $;弧$NS&#x3D;90.392400\degree $;</p>
+<center> $\cos GS=\cos NG\cdot \cos NS+\sin AG\cdot \sin NS\cdot \cos GNS $ </center>
+
+<center> $\cos CS=0.447488\times (-0.006849)+0.894290\times 0.999977\times 0.973471 $ </center>
+
+<center> $\cos CS=-0.003065+0.870546=0.867481 $ </center>
+
+<p>&emsp;&emsp;有$CS&#x3D;29.832760\degree $,相加得$53.015275\degree $.</p>
+<p>&emsp;&emsp;小于经过重庆的$53.345073\degree $，所以，过贵阳更近不绕路。</p>
+<p>&emsp;&emsp;对应里程(以地球半径$6374km$算)：$ 5897.8km $,$ 5934.6km $.</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 スズラン の Garden.
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;John Doe
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
