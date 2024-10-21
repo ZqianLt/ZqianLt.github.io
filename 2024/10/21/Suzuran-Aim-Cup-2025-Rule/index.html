@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Suzuran Aim Cup 2025 Rule(中文版) | スズラン の Garden.</title>
+    <meta name="author" content="Zqian-LT" />
+    <meta name="description" content="A secret home where I can relax." />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>スズラン の GARDEN.</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About ZqianLT</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/Suzuran%20Aim%20Cup">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Suzuran Aim Cup</span>
+        </a>
+        
+        <a href="/Group">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Event</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;スズラン の GARDEN.</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About ZqianLT</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/Suzuran%20Aim%20Cup">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Suzuran Aim Cup</div>
+                    </div>
+                </a>
+                
+                <a href="/Group">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Event</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Suzuran Aim Cup 2025 Rule(中文版)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/21
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/SAC/" style="color: #00a596">
+                    SAC
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="一-总则"><a href="#一-总则" class="headerlink" title="一.总则"></a>一.总则</h2><p>&emsp;&emsp;1.1.1  铃兰Aim杯(Suzuran Aim Cup，下面部分简称SAC)是一个面向中文社区低分段(25k—100pp)的Relax比赛。</p>
+<p>&emsp;&emsp;1.1.2  比赛在osu!官方服务器(Bancho)进行，使用Stable进行游戏，对决方式为Team VS，2v2，采用Acc计分，强制使用relax模组。</p>
+<p>&emsp;&emsp;1.1.3  本项比赛有特殊的Acc bonus规则，每轮图池根据图池难度设置有Acc&#x2F;FC指标，单张谱面每达成一次指标可以获取对应bonus奖励。</p>
+<span id="more"></span>
+
+<h2 id="二-报名"><a href="#二-报名" class="headerlink" title="二.报名"></a>二.报名</h2><h4 id="一-报名条件"><a href="#一-报名条件" class="headerlink" title="(一).报名条件"></a>(一).报名条件</h4><p>具有参赛资格的玩家，只要在报名期间内如实填写报名表，在通过审查后即可参加Suzuran Aim Cup。获取参赛资格需要同时满足以下所有条件条件：</p>
+<p>&emsp;&emsp;2.1.1 在进入资格赛前Bancho服务器(官服)内rank在25k—100k区间范围内。<br>&emsp;&emsp;[2.1.2 如有使用过私服，必须要提供其私服账号给Staff组检查账号成绩。]<br>&emsp;&emsp;2.1.2 无小号、代打、外挂等相关情况。账号无禁言以外的不良记录。<br>&emsp;&emsp;2.1.3 在比赛期间能够使用中文交流，能够使用QQ作为通讯工具。<br>&emsp;&emsp;2.1.4 在2024.12.25至2025.1.20期间有osu!Standard游玩记录。</p>
+<h4 id="二-资格待定"><a href="#二-资格待定" class="headerlink" title="(二).资格待定"></a>(二).资格待定</h4><p>若玩家报名结束时不满足2.1.1所述之rank要求，但其rank在22k-25k范围内，且满足上述其他要求，则该玩家仍可报名。报名后，该玩家将进入“待定区”。在总报名人数未达到预期人数时，Suzuran Aim Cup赛事组委会会视实际情况允许待定区的选手参与比赛。</p>
+<p>Suzuran Aim Cup的工作人员将按如下顺序判断先邀请待定区的哪些选手参加比赛：</p>
+<p>&emsp;&emsp;2.2.1  报名Rank更接近25k者优先者优先。<br>&emsp;&emsp;2.2.2  条2.2.1中Rank相同者，时间较早者优先。</p>
+<h4 id="三-资格赛前退赛"><a href="#三-资格赛前退赛" class="headerlink" title="(三).资格赛前退赛"></a>(三).资格赛前退赛</h4><p>&emsp;&emsp;2.3.1  在资格赛开始前或进行时，选手可以申请退赛。退赛需要联系比赛工作人员，此阶段无需给出正当退赛理由。<br>&emsp;&emsp;2.3.2  在资格赛后且正赛前退赛，由于此时资格赛排名和队伍已经确定，此时情况应当视为下面第XXX条。</p>
+<h4 id="四-审查-Screen"><a href="#四-审查-Screen" class="headerlink" title="(四).审查(Screen)"></a>(四).审查(Screen)</h4><p>&emsp;&emsp;2.4.1  比赛无报名人数上限，报名人数以最后通过玩家审查(Screen)的人数为准。<br>&emsp;&emsp;[2.4.2  SAC赛务团队会仔细核对选手提交的私服账号数据。如果选手的实力远高于Suzuran Aim Cup的目标分段则无法参加比赛。]</p>
+<h4 id="五-其它"><a href="#五-其它" class="headerlink" title="(五).其它"></a>(五).其它</h4><p>&emsp;&emsp;2.5.1  若玩家报名时不满足语言、不良记录、游玩记录等方面的要求，则该玩家不具备参赛资格，也不会进入待定区。<br>&emsp;&emsp;2.5.2  每位选手尽量确保在报名阶段结束前加入QQ群组。进入比赛群后，当届赛选手必须修改群昵称为游戏账号的ID。QQ群号：278019695。</p>
+<h2 id="三-赛程与赛制"><a href="#三-赛程与赛制" class="headerlink" title="三.赛程与赛制"></a>三.赛程与赛制</h2><h4 id="一-赛程（以双败淘汰赛为例）"><a href="#一-赛程（以双败淘汰赛为例）" class="headerlink" title="(一).赛程（以双败淘汰赛为例）"></a>(一).赛程（以双败淘汰赛为例）</h4><details><summary>3.1.1 各个比赛结算时间表在下方列出</summary>
+
+<blockquote>
+ </br>
+ <center>报名阶段：XX—XX</center>
+ <center>预选赛阶段（预计）：2025.1.20—XX</center>
+ <center>QF（四分之一决赛轮）：XX—XX</center> 
+ <center>SF（半决赛轮）：XX—XX</center> 
+ <center>F（决赛轮）：XX—XX</center>  
+ <center>GF（总决赛轮）：XX—XX</center>  
+ </br>
+ </details> 
+</blockquote>
+<h4 id="二-赛制"><a href="#二-赛制" class="headerlink" title="(二).赛制"></a>(二).赛制</h4><p>&emsp;&emsp;3.2.1 本届比赛预选赛进16队。比赛完全采用双败淘汰赛。<br>&emsp;&emsp;3.2.2  在完成预选赛后，所有选手根据预选赛成绩进行排名分组，以16队过资格赛为例，Seed1将会在下一轮(即起始分组)中和Seed16分进一组，接下来Seed2 v Seed15，后续同理。每局的获胜方进入胜者组，败方则进入败者组。此后的比赛中，胜者组的队伍输掉比赛后将掉入败者组，已经处在败者组的队伍输掉比赛后将被淘汰。<br>&emsp;&emsp;3.2.3  总决赛（GF）将由胜者组存活的最后一支队伍与败者组存活的最后一支队伍对阵。倘若第一局胜者组队伍失败、败者组队伍获胜，那么胜者组记一败，两队在几十分钟的休息过后要重新进行一次比赛，即Bracket Reset（简称BR）。BR的最终胜利方即取得比赛冠军。</p>
+<h4 id="三-对局分配"><a href="#三-对局分配" class="headerlink" title="(三).对局分配"></a>(三).对局分配</h4><p>&emsp;&emsp;3.3.1  资格赛结束后，根据分组情况依次排出胜者组A，B，…，Z组。<br>&emsp;&emsp;3.3.2  每一场选手输掉表赛后分进败者组，按照L-1组，L-2组排序。</p>
+<h6 id="emsp-emsp-对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran-Aim-Cup工作人员确认修改时间。"><a href="#emsp-emsp-对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran-Aim-Cup工作人员确认修改时间。" class="headerlink" title="&emsp;&emsp;对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran Aim Cup工作人员确认修改时间。"></a>&emsp;&emsp;对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran Aim Cup工作人员确认修改时间。</h6><p>&emsp;&emsp;3.3.3  若双方无法协商出合适的比赛时间段，则只能按照默认时间表上规定的时间进行比赛，实际比赛时未能到达的一方视为FF。<br>&emsp;&emsp;3.3.4  推荐时间段为：工作日19：30—22：00，节假日9：00—23：00。</p>
+<h2 id="四-组队"><a href="#四-组队" class="headerlink" title="四.组队"></a>四.组队</h2><h4 id="一-队伍规模、形式、要求"><a href="#一-队伍规模、形式、要求" class="headerlink" title="(一).队伍规模、形式、要求"></a>(一).队伍规模、形式、要求</h4><p>&emsp;&emsp;4.1.1  本届组队采用完全自由组队原则，队伍由两人组成，无任何限制。任何通过审查成功报名的玩家均可进行自由组队。<br>&emsp;&emsp;4.1.2  任意两人组队完成后，需将队名，队旗和组队人员信息提交给主办方，通过后即可完成组队，队伍信息将会在主表格上显示。<br>&emsp;&emsp;4.1.3  队伍名称须在14字以内，不可包含特殊字符与除空格外的不可见字符。队伍信息与队旗中严禁使用违反国家法律法规、有冒犯性或过度暴露的内容。<br>&emsp;&emsp;4.1.4  自由组队时间段为______，在此之后，若仍有成功报名的选手未组队（可能是未主动组队或队友成功退赛），主办方将对未组队选手进行随机组队。<br>&emsp;&emsp;4.1.5  每个队伍需有一名队长，负责接收主办方通知，roll点等操作。</p>
+<h2 id="五-图池"><a href="#五-图池" class="headerlink" title="五.图池"></a>五.图池</h2><h4 id="一-Mod"><a href="#一-Mod" class="headerlink" title="(一).Mod"></a>(一).Mod</h4><p>&emsp;&emsp;在Suzuran Aim Cup中，有<strong>NM</strong>、<strong>HD</strong>、<strong>HR</strong>、<strong>DT</strong>、<strong>FM</strong>、<strong>TB</strong>共6个Mod类型。</p>
+<details><summary>以下对各个图池及其mod规则进行详述：</summary>
+
+<blockquote>
+ </br>
+ <center>NM：所有人强制携带RX，禁止携带其他MOD。</center>
+ <center>HD(Hidden)：所有人强制携带RX+HD，禁止携带其他MOD。</center>
+ <center>HR(HardRock)：所有人强制携带RX+HR，禁止携带其他MOD。</center> 
+ <center>DT(DoubleTime)：所有人强制携带RX+DT，双方选手可以自由选择是否使用HD。</center> 
+ <center>FM(Free Mod)：在 FreeMod 选择中，每个队伍至少需要 2 个 Mod，HR 算作 2 个 Mod，例如：(2 个 Hidden 或 Hardrock + NoMod)</center>  
+ <center>TB(TieBreak)：仅在TB阶段时开启，所有人强制携带RX，所有选手可以自由选择EZ、HR、HD、FL及其任意组合搭配。</center>  
+ </br>
+ </details> 
+</blockquote>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2017 - 2024 スズラン の Garden.
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Zqian-LT
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
