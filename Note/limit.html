@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>limit | スズラン の Garden.</title>
+    <title>Function limit | スズラン の Garden.</title>
     <meta name="author" content="Zqian-LT" />
     <meta name="description" content="A secret home where I can relax." />
     <meta name="keywords" content="" />
@@ -189,7 +189,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>limit</h1>
+        <h1>Function limit</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -203,15 +203,16 @@
     </div>
     
     <div class="content" v-pre>
-        <p>$\mathrm{eg}1.$&emsp;&emsp;<font size=4>$ \underset{n\rightarrow \infty}{\lim}\sqrt[n]{\sin 1+\sin \frac{1}{2}+\cdots +\sin \frac{1}{n}} $ </font></p>
+        <h4 id="1-Squeeze-Theorem"><a href="#1-Squeeze-Theorem" class="headerlink" title="1.Squeeze Theorem"></a>1.Squeeze Theorem</h4><p>$\mathrm{Eg}1.$&emsp;&emsp;<font size=4>$ \underset{n\rightarrow \infty}{\lim}\sqrt[n]{\sin 1+\sin \frac{1}{2}+\cdots +\sin \frac{1}{n}} $ </font></p>
 <blockquote>
  </br>
  <details><summary><font color = green>解</font></summary></br>
- 
+ <font color = green>$ \because \underset{n\rightarrow \infty}{\lim}\sqrt[n]{\sin 1}=\underset{n\rightarrow \infty}{\lim}\left( \sin 1 \right) ^{\frac{1}{n}}=1 $ 以及 $ \underset{n\rightarrow \infty}{\lim}\sqrt[n]{1+\frac{1}{2}+\cdots +\frac{1}{n}}=1 $</font></br></br>
+ <font color = green>$ \therefore $原式$=1$</font>
  </details>
  </br>
 </blockquote>
-<p>$\mathrm{eg}2.$&emsp;&emsp;<font size=4>$ \underset{n\rightarrow \infty}{\lim}\left( \frac{n}{n+\pi}+\frac{n}{n+2\pi}+\cdots +\frac{n}{n+n\pi} \right) $ </font> </p>
+<p>$\mathrm{Eg}2.$&emsp;&emsp;<font size=4>$ \underset{n\rightarrow \infty}{\lim}\left( \frac{n}{n+\pi}+\frac{n}{n+2\pi}+\cdots +\frac{n}{n+n\pi} \right) $ </font> </p>
 <blockquote>
  </br>
  <details><summary><font color = green>解</font></summary></br>
@@ -219,7 +220,7 @@
  </details>
  </br>
 </blockquote>
-<p>$\mathrm{eg}3.$&emsp;&emsp;<font size=4>$ \underset{n\rightarrow \infty}{\lim}\left( \frac{1}{n^2+n+1}+\frac{2}{n^2+n+2}+\cdots +\frac{3}{n^2+n+n} \right)  $ </font></p>
+<p>$\mathrm{Eg}3.$&emsp;&emsp;<font size=4>$ \underset{n\rightarrow \infty}{\lim}\left( \frac{1}{n^2+n+1}+\frac{2}{n^2+n+2}+\cdots +\frac{3}{n^2+n+n} \right)  $ </font></p>
 <blockquote>
  </br>
  <details><summary><font color = green>解</font></summary></br>
