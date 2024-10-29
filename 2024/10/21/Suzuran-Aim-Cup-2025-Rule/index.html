@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Suzuran Aim Cup 2025 Rule(中文版) | スズラン の Garden.</title>
+    <meta name="author" content="Zqian-LT" />
+    <meta name="description" content="A secret home where I can relax." />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>スズラン の GARDEN.</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About ZqianLT</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/Suzuran%20Aim%20Cup">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Suzuran Aim Cup</span>
+        </a>
+        
+        <a href="/group">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Event</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;スズラン の GARDEN.</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About ZqianLT</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/Suzuran%20Aim%20Cup">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Suzuran Aim Cup</div>
+                    </div>
+                </a>
+                
+                <a href="/group">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Event</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Suzuran Aim Cup 2025 Rule(中文版)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/21
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/SAC/" style="color: #00a596">
+                    SAC
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <center><a><img src="https://s2.loli.net/2024/10/28/yuFBq6xboQGImZp.png" ></a></center>
+
+<h2 id="一-总则"><a href="#一-总则" class="headerlink" title="一.总则"></a>一.总则</h2><p>&emsp;&emsp;1.1.1  铃兰Aim杯2025(Suzuran Aim Cup 2025，下面部分简称SAC 2025)是一项主要面向中文社区低分段(20k—90k)的Relax比赛。<br>&emsp;&emsp;1.1.2  比赛在osu!官方服务器(Bancho)进行，使用Stable进行游戏，比赛队伍预设人数为2人，对决方式为Team VS，2v2，强制使用relax模组，采用准确度(acc)计分，acc更高的一方获得会获得本图的胜利。<br>&emsp;&emsp;1.1.3  本项比赛采用资格赛+双败淘汰赛制。报名人数没有上限限制。资格赛结束后将产生16支队伍进入正赛。<br>&emsp;&emsp;1.1.4  本项比赛有特殊的Acc bonus规则，每轮图池根据图池难度设置有Acc&#x2F;FC指标，单张谱面每达成一次指标可以获取对应bonus奖励。<br>&emsp;&emsp;1.1.5  每位选手尽量确保在报名阶段结束前加入QQ群组。进入比赛群后，当届赛选手必须修改群昵称为游戏账号的ID。QQ群号：278019695。</p>
+<span id="more"></span>
+
+<h2 id="二-报名"><a href="#二-报名" class="headerlink" title="二.报名"></a>二.报名</h2><h4 id="2-1-报名条件"><a href="#2-1-报名条件" class="headerlink" title="(2.1).报名条件"></a>(2.1).报名条件</h4><p>具有参赛资格的玩家，只要在报名期间内如实填写报名表，在通过审查后即可参加Suzuran Aim Cup。获取参赛资格需要同时满足以下所有条件条件：</p>
+<p>&emsp;&emsp;2.1.1 在进入资格赛前Bancho服务器(官服)内rank在20k—90k区间范围内。<br>&emsp;&emsp;[2.1.2 如有使用过私服，必须要提供其私服账号给Staff组检查账号成绩。]<br>&emsp;&emsp;2.1.2 无小号、代打、外挂等相关情况。账号无禁言以外的不良记录。<br>&emsp;&emsp;2.1.3 在比赛期间能够使用中文交流，能够使用QQ作为通讯工具。<br>&emsp;&emsp;2.1.4 在2024.11.25至2025.1.20期间有osu!Standard游玩记录。</p>
+<h4 id="2-2-资格待定"><a href="#2-2-资格待定" class="headerlink" title="(2.2).资格待定"></a>(2.2).资格待定</h4><p>若玩家报名结束时不满足2.1.1所述之rank要求，但其rank在15k-100k范围内，且满足上述其他要求，则该玩家仍有机会获得参赛资格。报名后，该玩家将进入“待定区”。在总报名人数未达到预期人数时，Suzuran Aim Cup赛事组委会会视实际情况允许待定区的选手参与比赛。</p>
+<p>Suzuran Aim Cup的工作人员将按如下顺序判断先邀请待定区的哪些选手参加比赛：</p>
+<p>&emsp;&emsp;2.2.1  报名Rank更接近25k者优先。</p>
+<h4 id="2-3-资格赛前退赛"><a href="#2-3-资格赛前退赛" class="headerlink" title="(2.3).资格赛前退赛"></a>(2.3).资格赛前退赛</h4><p>&emsp;&emsp;2.3.1  在资格赛开始前或进行时，选手可以申请退赛。退赛需要联系比赛工作人员，此阶段无需给出正当退赛理由。<br>&emsp;&emsp;2.3.2  在资格赛后且正赛前退赛，由于此时资格赛排名和队伍已经确定，此时情况应当视为下面第XXX条。</p>
+<h4 id="2-4-审查-Screen"><a href="#2-4-审查-Screen" class="headerlink" title="(2.4).审查(Screen)"></a>(2.4).审查(Screen)</h4><p>&emsp;&emsp;2.4.1  比赛无报名人数上限，报名人数以最后通过玩家审查(Screen)的人数为准。<br>&emsp;&emsp;[2.4.2  SAC赛务团队会仔细核对选手提交的私服账号数据。如果选手的实力远高于Suzuran Aim Cup的目标分段则无法参加比赛。]<br>&emsp;&emsp;2.4.3  若玩家报名时不满足语言、不良记录、游玩记录等方面的要求，则该玩家不具备参赛资格，也不会进入待定区。</p>
+<h4 id="2-5-其它"><a href="#2-5-其它" class="headerlink" title="(2.5).其它"></a>(2.5).其它</h4><p>&emsp;&emsp;2.5.1  考虑到本届比赛难度，为确保您的参赛体验，特此温馨提示：若非relax玩家，建议报名分数段: &gt;&#x3D;6000pp 。</p>
+<h2 id="三-赛程与赛制"><a href="#三-赛程与赛制" class="headerlink" title="三.赛程与赛制"></a>三.赛程与赛制</h2><h4 id="3-1-赛程（以双败淘汰赛为例）"><a href="#3-1-赛程（以双败淘汰赛为例）" class="headerlink" title="(3.1).赛程（以双败淘汰赛为例）"></a>(3.1).赛程（以双败淘汰赛为例）</h4><details><summary>3.1.1 各个比赛结算时间表在下方列出</summary>
+
+<blockquote>
+ </br>
+ <center>报名开始时间：2024.11.5 0:00</center>
+ <center>报名截止时间：2025.01.5 0:00</center>
+ <center>预选赛阶段（预计）：2025.1.20—XX</center>
+ <center>QF（四分之一决赛轮）：XX—XX</center> 
+ <center>SF（半决赛轮）：XX—XX</center> 
+ <center>F（决赛轮）：XX—XX</center>  
+ <center>GF（总决赛轮）：XX—XX</center>  
+ </br>
+ </details> 
+</blockquote>
+<h4 id="3-2-赛制"><a href="#3-2-赛制" class="headerlink" title="(3.2).赛制"></a>(3.2).赛制</h4><p>&emsp;&emsp;3.2.1  本届比赛预选赛进16队。比赛完全采用双败淘汰赛。<br>&emsp;&emsp;3.2.2  在完成预选赛后，所有选手根据预选赛成绩进行排名分组，以16队过资格赛为例，Seed1将会在下一轮(即起始分组)中和Seed16分进一组，接下来是Seed2 v Seed15，后续同理。每局的获胜方进入胜者组，败方则进入败者组。此后的比赛中，胜者组的队伍输掉比赛后将掉入败者组，已经处在败者组的队伍输掉比赛后将被淘汰。注：资格赛成绩采用按照z-sum进行排名，参考SAC 2024。<br>&emsp;&emsp;3.2.3  总决赛（GF）将由胜者组存活的最后一支队伍与败者组存活的最后一支队伍对阵。倘若第一局胜者组队伍失败、败者组队伍获胜，那么胜者组记一败，两队在三十分钟的休息过后需要重新进行一次比赛，即Bracket Reset（简称BR）。BR的最终胜利方即取得比赛冠军。</p>
+<h4 id="3-3-对局分配"><a href="#3-3-对局分配" class="headerlink" title="(3.3).对局分配"></a>(3.3).对局分配</h4><p>&emsp;&emsp;3.3.1  资格赛结束后，根据分组情况依次排出胜者组A，B，…，Z组。<br>&emsp;&emsp;3.3.2  每一场选手输掉表赛后分进败者组，按照L-1组，L-2组排序。</p>
+<h6 id="emsp-emsp-对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran-Aim-Cup工作人员确认修改时间。"><a href="#emsp-emsp-对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran-Aim-Cup工作人员确认修改时间。" class="headerlink" title="&emsp;&emsp;对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran Aim Cup工作人员确认修改时间。"></a>&emsp;&emsp;对阵表确定后，表格内将预填有默认比赛时间，每个比赛日内按照A，B，…，Z或者L-1、L-2、…的顺序安排时间。所有选手需要注意自己对局的时间安排。如果有协调比赛时间的想法，请在比赛总群内与该轮对局的另一方选手进行沟通。沟通完毕后，请联系Suzuran Aim Cup工作人员确认修改时间。</h6><p>&emsp;&emsp;3.3.3  若双方无法协商出合适的比赛时间段，则只能按照默认时间表上规定的时间进行比赛，实际比赛时未能到达的一方视为FF。<br>&emsp;&emsp;3.3.4  推荐时间段为：工作日19：30—22：00，节假日9：00—23：00。</p>
+<h2 id="四-组队"><a href="#四-组队" class="headerlink" title="四.组队"></a>四.组队</h2><h4 id="一-队伍规模、形式、要求"><a href="#一-队伍规模、形式、要求" class="headerlink" title="(一).队伍规模、形式、要求"></a>(一).队伍规模、形式、要求</h4><p>&emsp;&emsp;4.1.1  本届组队采用完全自由组队原则，队伍由两人组成，无任何限制。任何通过审查成功报名的玩家均可进行自由组队。<br>&emsp;&emsp;4.1.2  任意两人组队完成后，需将队名，队旗和组队人员信息提交给主办方，通过后即可完成组队，队伍信息将会在主表格上显示。<br>&emsp;&emsp;4.1.3  队伍名称须在14字以内，不可包含特殊字符与除空格外的不可见字符。队伍信息与队旗中严禁使用违反国家法律法规、有冒犯性或过度暴露的内容。<br>&emsp;&emsp;4.1.4  自由组队时间段与报名时间段保持一致，在此之后，若仍有成功报名的选手未组队（可能是未主动组队或队友成功退赛），主办方将对未组队选手进行随机组队。<br>&emsp;&emsp;4.1.5  每个队伍需有一名队长，负责接收主办方通知，roll点等操作。</p>
+<h2 id="五-图池"><a href="#五-图池" class="headerlink" title="五.图池"></a>五.图池</h2><h4 id="5-1-Mod"><a href="#5-1-Mod" class="headerlink" title="(5.1).Mod"></a>(5.1).Mod</h4><p>&emsp;&emsp;在Suzuran Aim Cup图池中，一共包含 <font color=green><strong>NM</strong></font>、<font color=orange><strong>HD</strong></font>、<font color=red><strong>HR</strong></font>、<font color=blue><strong>DT</strong></font>、<font color=purple><strong>FM</strong></font>、<font color=grey><strong>TB</strong></font>共6个Mod类型。</p>
+<details><summary>以下对各个图池及其mod规则进行详述：</summary>
+
+<blockquote>
+ </br>
+ <center><font color=green>NM</font>：所有人强制携带RX，禁止携带其他MOD。</center>
+ <center><font color=orange>HD(Hidden)</font>：所有人强制携带RX+HD，禁止携带其他MOD。</center>
+ <center><font color=red>HR(HardRock)</font>：所有人强制携带RX+HR，禁止携带其他MOD。</center> 
+ <center><font color=blue>DT(DoubleTime)</font>：所有人强制携带RX+DT，双方选手可以自由选择是否使用HD。</center> 
+ <center><font color=purple>FM(Free Mod)</font>：所有人强制携带RX，再此基础上，每个队伍至少需要 2 个 Mod，HR 算作 2 个 Mod，例如：(2 个 Hidden 或 Hardrock + NoMod)</center>  
+ <center><font color=grey>TB(TieBreak)</font>：[仅在TB阶段时开启]所有人强制携带RX，所有选手可以自由选择EZ、HR、HD、FL及其任意组合搭配。</center>  
+ </br>
+ </details> 
+</blockquote>
+<h4 id="5-2-考点分布"><a href="#5-2-考点分布" class="headerlink" title="(5.2).考点分布"></a>(5.2).考点分布</h4><details><summary>详见下表.</summary>
+
+<blockquote>
+ </br>
+ <a><img src="https://s2.loli.net/2024/10/24/jIPu4DctybgRqTE.jpg" ></a></br>
+ </br>
+ </details> 
+</blockquote>
+<h4 id="5-3-图池难度、规模"><a href="#5-3-图池难度、规模" class="headerlink" title="(5.3).图池难度、规模"></a>(5.3).图池难度、规模</h4><details><summary>5.3.1  每一轮图池难度参考如下(下述参考星数为使用relax mod前的星数)：</summary>
+
+<blockquote>
+ </br>
+ <center>Qua：8*</center>
+ <center>RO16：7.4*</center>
+ <center>QF：7.7*</center> 
+ <center>SF：8.2*</center> 
+ <center>F：8.7*</center>  
+ <center>GF：9.2*</center>  
+ </br>
+ </details> 
+</blockquote>
+<details><summary>5.3.2  每一轮图池规模如下：</summary>
+
+<blockquote>
+ </br>
+ <center>RO16：<font color=green>5NM</font>、<font color=orange>2HD</font>、<font color=red>2HR</font>、<font color=blue>3DT</font>、<font color=purple>2FM</font>、<font color=grey>1TB</font>    (BO11 2Ban)</center>
+ <center>QF/SF/F/GF：<font color=green>6NM</font>、<font color=orange>3HD</font>、<font color=red>3HR</font>、<font color=blue>4DT</font>、<font color=purple>3FM</font>、<font color=grey>1TB</font>    (BO13 2Ban)</center></br>
+ 备注：一些位置的难度会略高于5.3.1中所给出参考值。 </br>
+ </br>
+ </details> 
+</blockquote>
+<h2 id="六-比赛进行"><a href="#六-比赛进行" class="headerlink" title="六.比赛进行"></a>六.比赛进行</h2><h4 id="6-1-赛前准备"><a href="#6-1-赛前准备" class="headerlink" title="(6.1).赛前准备"></a>(6.1).赛前准备</h4><p>&emsp;&emsp;6.1.1 每场比赛开始前15分钟，工作人员将会提醒选手按时参加比赛。每场比赛开始前5分钟，该局比赛裁判将邀请双方选手进入多人游戏房间。并在裁判指示下移动至指定位置。</p>
+<h4 id="6-2-赛中"><a href="#6-2-赛中" class="headerlink" title="(6.2).赛中"></a>(6.2).赛中</h4><p>&emsp;&emsp;6.2.1 双方选手进入比赛后则进入roll点环节，双方各指定一名队员参与roll点，点数较大者决定先ban+pick或者后ban+pick。</p>
+<blockquote>
+<p> 例如：A队决定先ban+pick，则此时对应的bp顺序为：<br> <font color=red>A ban</font>&#x2F;<font color=blue>B ban</font>&#x2F;<font color=red>A pick</font>&#x2F;<font color=blue>B pick</font>&#x2F;<font color=red>A pick</font>&#x2F;<font color=blue>B pick</font>&#x2F;<font color=red>A ban</font>&#x2F;<font color=blue>B ban</font>&#x2F;……</p>
+</blockquote>
+<p>&emsp;&emsp;6.2.2 在ban图环节中，不允许任意一方ban相同mod类型的图。<br>&emsp;&emsp;6.2.3 本届比赛没有热手环节。<br>&emsp;&emsp;6.2.4 “每队伍每场比赛有2次暂停机会。每次暂停持续2分钟。如果有一方在ban pick或者上人阶段超时，会自动使用一次暂停机会。”<br>&emsp;&emsp;6.2.5 如果有玩家在一张图开始后的1&#x2F;4时间内掉线，队员可在游戏房间内申请!mp abort进行重赛。倘若在超过1&#x2F;4时间内掉线，则重赛申请无效。重赛时双方选手的mod位置不可变更。</p>
+<h4 id="6-3-迟到"><a href="#6-3-迟到" class="headerlink" title="(6.3).迟到"></a>(6.3).迟到</h4><p>&emsp;&emsp;6.3.1 如在预定比赛时间到达后，其中一方队伍有选手未到场，则视为该方迟到，迟到15分钟后，视为放弃本场比赛。</p>
+<h2 id="七-违规与处罚"><a href="#七-违规与处罚" class="headerlink" title="七.违规与处罚"></a>七.违规与处罚</h2><h4 id="7-1-个人违规"><a href="#7-1-个人违规" class="headerlink" title="(7.1).个人违规"></a>(7.1).个人违规</h4><p>&emsp;&emsp;7.1.1 扰乱比赛秩序，包括但不限于在比赛进行时无理由退出，在比赛进行时故意不站到裁判指定位置，在比赛房间内刷屏等行为。第一次出现时裁判将会予以警告，警告后仍犯者，取消该队本场比赛资格。<br>&emsp;&emsp;7.1.2 代打，在比赛中代打的，将被取消此届比赛的参赛资格。<br>&emsp;&emsp;7.1.3 小号，在比赛开始后，一经发现有选手拥有小号(无论是否在比赛中)，将被取消此届比赛的参赛资格。<br>&emsp;&emsp;7.1.4 作弊，在比赛中，若发现有选手使用不正当辅助程序进行游戏(无论是否在比赛中)即作弊，将被取消此届比赛的参赛资格。</p>
+<p>&emsp;&emsp;特别说明:在选手出现小号、代打、作弊等严重违规情况时，该队会被立即取消参赛资格。后续会重新安排赛程，必要情况包括考虑赛程回滚。</p>
+<p>备注：所有违反了上述第7.1.2——7.1.4条的选手将会由工作人员向官方提交举报。</p>
+<h4 id="7-2-举报"><a href="#7-2-举报" class="headerlink" title="(7.2).举报"></a>(7.2).举报</h4><p>&emsp;&emsp;7.2.1 如果您在比赛进行中发现有选手出现违规行为，您可以向比赛工作人员提出举报，无论您是选手或者是观赛者，我们会立刻进行调查及确认。(工作人员请直接通过群聊进行联系)<br>&emsp;&emsp;7.2.2 在收到举报后，工作人员将采取以下措施：</p>
+<blockquote>
+<p> 调查被举报选手的信息，并做好对举报者信息的保密工作。<br> 若确认为违规，则会按照规则进行处理。<br> 若确认没有违规，则工作人员将及时向举报者反馈处理情况。如为匿名举报，则不进行反馈。</p>
+</blockquote>
+<h2 id="八-赛事奖品"><a href="#八-赛事奖品" class="headerlink" title="八.赛事奖品"></a>八.赛事奖品</h2><h4 id="8-1-选手奖励"><a href="#8-1-选手奖励" class="headerlink" title="(8.1).选手奖励"></a>(8.1).选手奖励</h4><p>&emsp;&emsp;8.1.1 队伍在比赛结束后按照取得的名次获得如下奖励：</p>
+<blockquote>
+ </br>
+ <center>1st：队员各1年supporter+队伍500CNY+定制奖品+个人主页banner+(主页奖牌Badge(也许有.)).</center>
+ <center>2nd：队员各6月supporter+队伍300CNY+个人主页banner+定制奖品.</center>
+ <center>3rd：队员各2月supporter+队伍100CNY+个人主页banner.</center>
+ <center>4th-8th：队伍各20CNY.</center>
+ <center>9-16th：队伍各10CNY.</center>  </br>
+</blockquote>
+<h4 id="8-2-Staff奖励"><a href="#8-2-Staff奖励" class="headerlink" title="(8.2).Staff奖励"></a>(8.2).Staff奖励</h4><p>&emsp;&emsp;8.2.1 所有参与staff按照对应职位获得相应专属定制纪念品：</p>
+<blockquote>
+<p> 暂不透露</p>
+</blockquote>
+<hr>
+<h4 id="Q-A"><a href="#Q-A" class="headerlink" title="Q &amp; A"></a><center>Q &amp; A</center></h4><blockquote>
+ </br>
+ <details><summary>Q1.&ensp;我报名未达到比赛分数段，是否可以报名?</summary>
+ </br>
+ A1.可以。但在如果报名截止时，仍未达到报名要求，则无法获得参赛资格.</br>
+ </details> 
+ </br>
+</blockquote>
+<blockquote>
+ </br>
+ <details><summary>Q2.&ensp;如果我的队友在报名截止时仍未达到报名要求或者未通过审查,此时应该怎么做?</summary>
+ </br>
+ A2.这种情况下Staff会私聊联系你，并根据实际情况处理.</br>
+ </details> 
+ </br>
+</blockquote>
+<blockquote>
+ </br>
+ <details><summary>Q3.&ensp;"2.3.1"中的"正当理由"是指?</summary>
+ </br>
+ A3.指由生活、学习、工作方面等不可抗力因素导致的无法抽出时间参与后续的比赛的情况.伤病情况包含在内.</br>
+ </details> 
+ </br>
+</blockquote>
+<hr>
+<h4 id="问题清单"><a href="#问题清单" class="headerlink" title="问题清单"></a><center>问题清单</center></h4><blockquote>
+<p> <font color = green>已解决</font><br> 1.1.1 建议修改为<br> “铃兰Aim杯(Suzuran Aim Cup，下面部分简称SAC)是一个面向中文社区的Relax比赛。报名rank范围：25k-100k。”<br> 问题：明确本届比赛的名称是“铃兰Aim杯(Suzuran Aim Cup)”还是“铃兰Aim杯 2025(Suzuran Aim Cup 2025)”，建议写入本届比赛的名称而非系列赛的统称。</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 1.1.2 建议修改为<br> “比赛在osu!官方服务器(Bancho)进行，使用Stable进行游戏，比赛队伍人数为2人，对决方式为Team VS，2v2，强制使用relax模组，采用准确度（acc）计分，acc更高的一方获得会获得本图的胜利。”</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 添加新的1.1.3：<br> “本项比赛采用资格赛+双败淘汰赛制。报名人数没有上限限制。资格赛结束后将产生16支队伍进入正赛。”<br> 原1.1.3改为1.1.4</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 将原有的2.5.2改为1.1.5：“每位选手尽量确保在报名阶段结束前加入QQ群组。进入比赛群后，当届赛选手必须修改群昵称为游戏账号的ID。QQ群号：278019695。”<br> 并删除2.5.2内容</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 2.2.1 措辞混乱，改为“报名Rank更接近25k者优先。”</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 2.2.2 条没有必要，因为rank不可能相同<br> 问题：以选手什么时候的rank作为最终确认rank？如报名时、报名结束时。<br> 说明：由于rank是动态变化的，因此需要有一个最终确定rank，并且制定如果选手在报名阶段rank超出了比赛范围的应对办法，比如增加硬性规定“在报名阶段的任何时间段内，选手的rank不得超过22k，否则无法通过审查。”</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 2.5.1 建议作为审查内容并入到“2.4 审查（Screen）”栏目中称为“2.4.3”并且删除“2.5 其他”栏目。</p>
+<p> <font color = green>解决方案</font>：“2.5 其他”栏目中提供了参赛分数段建议.</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 3.1.1 “报名阶段”建议拆分成“报名开始：xxx”和“报名截止：xxx”两个具体日期。</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 3.2.2 需要指出资格赛如何进行seed排名。一般来说是z-sum。<br> 3.2.3 “几十分钟的休息”改为“十五分钟”<br> 注意：3.2.1和3.2.2中所说的“预选赛”应该是“资格赛”。</p>
+<p> <font color = green>解决方案</font>：30分钟休息时间.</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 4.1.4 对后续选手随机组队时，由于TS2的原因，需要考虑万一有一个人落单的情况如何处理。（即总报名人数为奇数）</p>
+<p> <font color = green>解决方案</font>：报名时以一队2人进行报名.</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 5.1 MOD 中“FM(Free Mod)”需要额外考虑EZ和FL及其组合算作几个mod，并且声明hdhr算作hr。<br> TB规则可以写成“TB采用FM规则。”</p>
+<p> <font color = green>解决方案</font>：EZ、FL算一个mod.</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 5.3.1 需要在最后声明“上述参考星数为relax前的星数。”</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 6.2.1 建议改为“ 双方选手进入比赛后则进入roll点环节，双方各指定一名队员参与roll点，点数较大者决定先ban先pick或者后ban后pick，开局双方各ban一张图。在双方二选结束后，进行第二次ban图，并且保持第一次的ban图顺序。”<br> 6.2.2 需要明确是否允许double pick。</p>
+<p> <font color = green>解决方案</font>：允许double pick.</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 新增 6.2.4：“每队伍每场比赛有2次暂停机会。每次暂停持续2分钟。如果有一方在ban pick或者上人阶段超时，会自动使用一次暂停机会。”<br> 新增 6.2.5：“如果有玩家在一张图开始后的1&#x2F;4时间内掉线，队员可在游戏房间内申请!mp abort进行重赛。倘若在超过1&#x2F;4时间内掉线，则重赛申请无效。重赛时双方选手的mod位置不可变更。”</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 排版问题：<br> 一、总则 栏目内的序号只需要两级</p>
+<p> <font color = green>解决方案</font>：不做更改，和后面格式保持统一.</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 二、报名 栏目内的二级标题应该由“（一）”转变为“2.1”，后面同理。</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 6.2.2和6.2.3不要写在蓝色框里。</p>
+</blockquote>
+<blockquote>
+<p> <font color = green>已解决</font><br> 其他：<br> 规则书里大量内容写了对小号、代打、作弊等行为的处罚。这部分内容建议减少或集中撰写。</p>
+</blockquote>
+<h4 id="提议清单"><a href="#提议清单" class="headerlink" title="提议清单"></a><center>提议清单</center></h4><blockquote>
+<p> <font color = orange>提议</font><br> 一.总则里增加”建议参赛分数段:“#xxx——#xxx”以及“面向xxx选手人群”：</p>
+</blockquote>
+<hr>
+<h4 id="其他信息"><a href="#其他信息" class="headerlink" title="其他信息"></a><center>其他信息</center></h4><blockquote>
+ </br>
+ <details><summary>Staff</summary>
+ </br>
+ Host :$~\mathrm{Zqian-LT}$.</br></br>
+ Ref:$~\mathrm{iFroze}~、~\mathrm{jj986544591}~、~\mathrm{kitakore}~、~\mathrm{koishi~komeiji}~、~\mathrm{Nosenso}$.</br></br>
+ Pooler:$~\mathrm{jj986544591}~、~\mathrm{koishi~komeiji}~、~\mathrm{Murmur~Twins}~、~\mathrm{YoungTian}~、~\mathrm{Zqian-LT}$.</br></br>
+ Test:$~\mathrm{alkali\_earth}~、~\mathrm{Murmur~Twins}~、~\mathrm{YoungTian}~、~\mathrm{TuRou}$.</br></br>
+ Table:$~\mathrm{alkali\_earth}~、~\mathrm{Citrusis}~、~\mathrm{stllok}~、~\mathrm{Zqian-LT}$.</br></br>
+ Mapper:$~\mathrm{Geum~Hui}~、~\mathrm{jj986544591}~、~\mathrm{Luval}~、~\mathrm{NatsuRin}~、~\mathrm{NekoShabeta}~、~\mathrm{Noob\_Oni}~、~\mathrm{YoungTian}$.</br></br>
+ Design:$~\mathrm{Citrusis}~、~\mathrm{Zqian-LT}$.</br></br>
+ Stream:$~\mathrm{Naughty\_chas}$.</br></br>
+ Commentator:$~\mathrm{iFroze}~、~\mathrm{kitakore}~、~\mathrm{Nosenso}$.</br></br>
+ Program:$~\mathrm{iFroze}~、~\mathrm{Naughty\_chas}~、~\mathrm{stllok}$.</br></br>
+ Ruler:$~\mathrm{[Somaria]}~、~\mathrm{My~Angel~Kuroe}$.</br>
+ </details> 
+ </br>
+</blockquote>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 スズラン の Garden.
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Zqian-LT
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

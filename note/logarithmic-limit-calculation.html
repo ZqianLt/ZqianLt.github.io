@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | スズラン の Garden.</title>
+    <title>Logarithmic limit calculation | スズラン の Garden.</title>
     <meta name="author" content="Zqian-LT" />
     <meta name="description" content="A secret home where I can relax." />
     <meta name="keywords" content="" />
@@ -45,7 +45,9 @@
 
 
 
-<script src="/js/lib/search.js"></script>
+
+
+
 
 
 
@@ -185,216 +187,108 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>Logarithmic limit calculation</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/24
+        </span>
         
-        <div class="timeline" data-title="2019cnaofinal-ext2">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/14</div>
-                <a href="/2024/10/14/cnao-2019-f-exT1/">
-                    <h3>2019 CNAO Final-ex T2</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E5%A4%A9%E4%BD%93%E6%B5%8B%E9%87%8F%E5%AD%A6/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            天体测量学
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E5%9D%90%E6%A0%87%E7%B3%BB/" style="color: #03a9f4">
-                                坐标系
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E5%A4%A9%E4%BD%93%E8%A7%86%E8%BF%90%E5%8A%A8/" style="color: #00a596">
-                                天体视运动
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="2019usaaaonaot8">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/15</div>
-                <a href="/2024/10/15/usaaao-2019-naoT8/">
-                    <h3>2019 USAAAO NAO T8</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            天体物理学
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E5%AE%87%E5%AE%99%E5%AD%A6/" style="color: #ff7d73">
-                                宇宙学
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E6%A0%87%E5%BA%A6%E5%9B%A0%E5%AD%90/" style="color: #00bcd4">
-                                标度因子
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E8%B4%B9%E9%87%8C%E5%BE%B7%E6%9B%BC%E6%96%B9%E7%A8%8B/" style="color: #00a596">
-                                费里德曼方程
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="2023ioaatheory(en-ver)">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/16</div>
-                <a href="/2024/10/16/ioaa-2023-theory/">
-                    <h3>2023 IOAA Theory (En-ver)</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/IOAA/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            IOAA
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/IOAA/" style="color: #00a596">
-                                IOAA
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="2024ioaatheory(en-ver)[updating]">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/18</div>
-                <a href="/2024/10/18/ioaa-2024-theory/">
-                    <h3>2024 IOAA Theory (En-ver)[updating]</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/IOAA/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            IOAA
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/IOAA/" style="color: #ff7d73">
-                                IOAA
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="suzuranaimcup2025rule(中文版)">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/21</div>
-                <a href="/2024/10/21/Suzuran-Aim-Cup-2025-Rule/">
-                    <h3>Suzuran Aim Cup 2025 Rule(中文版)</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/SAC/" style="color: #ffa2c4">
-                                SAC
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <h6 id="Note"><a href="#Note" class="headerlink" title="Note"></a><a href="https://suzuran-zqian.love/note/">Note</a></h6><h4 id="1-Logarithmic-limit-calculation"><a href="#1-Logarithmic-limit-calculation" class="headerlink" title="1.Logarithmic limit calculation."></a>1.Logarithmic limit calculation.</h4><p><font face="楷体" color=orange size=4>$(1).$定式$1^{\infty}$型.</font><br><font face="楷体" color=orange size=4>若$f\rightarrow 1,g\rightarrow \infty $,则$f^g\sim e^{g\left( f-1 \right)}$</font></p>
+<p><font face="楷体" color=orange size=4>$(2).$未定式$e^f-e^g$型.</font><br><font face="楷体" color=orange size=4>若$f-g\rightarrow 0 $,则$e^f-e^g&#x3D;e^g\left( e^{f-g}-1 \right) \sim e^g\left( f-g \right) $</font></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/296376879">$1.$文章详见《求极限：取对数的”套路”》</a>.</p>
+<hr>
+</br>
+
+<h5 id="1-emsp-定式-1-infty-型"><a href="#1-emsp-定式-1-infty-型" class="headerlink" title="$1.&emsp;$定式$1^{\infty}$型."></a>$1.&emsp;$定式$1^{\infty}$型.</h5><p>$\mathrm{Eg}1.$&emsp;<font size=4>$\underset{x\rightarrow +\infty}{\lim}\left( \frac{a^{\frac{1}{x}}+b^{\frac{1}{x}}}{2} \right) ^x $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$\sqrt{ab}$</font>
+ </details>
+ </br>
+</blockquote>
+<p>$\mathrm{Eg}2.$&emsp;<font size=4>$\underset{x\rightarrow +\infty}{\lim}\left( \frac{2}{\pi}\mathrm{arc}\tan x \right) ^x  $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$e^{-\frac{2}{\pi}}$</font>
+ </details>
+ </br>
+</blockquote>
+<p>$\mathrm{Eg}3.$&emsp;<font size=4>$\underset{x\rightarrow 0}{\lim}\left( \frac{\left( 1+x \right) ^{\frac{1}{x}}}{e} \right) ^{\frac{1}{x}}  $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$e^{-\frac{1}{2}}$</font>
+ </details>
+ </br>
+</blockquote>
+<h5 id="2-emsp-未定式-1-1-型"><a href="#2-emsp-未定式-1-1-型" class="headerlink" title="$2.$&emsp;未定式$1-1$型."></a>$2.$&emsp;未定式$1-1$型.</h5><p>$\mathrm{Eg}1.$&emsp;<font size=4>$\underset{x\rightarrow 0}{\lim}\frac{1-\cos x\sqrt{\cos 2x}\sqrt[3]{\cos 3x}}{x^2} $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$3$</font>
+ </details>
+ </br>
+</blockquote>
+<p>$\mathrm{Eg}2.$&emsp;<font size=4>$\underset{x\rightarrow 1}{\lim}\frac{\left( x^{3x-2}-x \right) \sin \left( 2\left( x-1 \right) \right)}{\left( x-1 \right) ^3}  $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$6$</font>
+ </details>
+ </br>
+</blockquote>
+<h5 id="3-emsp-未定式-e-f-e-g-型"><a href="#3-emsp-未定式-e-f-e-g-型" class="headerlink" title="$3.$&emsp;未定式$e^f-e^g$型."></a>$3.$&emsp;未定式$e^f-e^g$型.</h5><p>$\mathrm{Eg}1.$&emsp;<font size=4>$\underset{x\rightarrow 0}{\lim}\frac{\left( 1+x \right) ^{\frac{1}{x}}-e}{x} $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$-\frac{e}{2}$</font>
+ </details>
+ </br>
+</blockquote>
+<p>$\mathrm{Eg}2.$&emsp;<font size=4>$\underset{x\rightarrow 0}{\lim}\frac{e^{\left( 1+x \right) ^{\frac{1}{x}}}-\left( 1+x \right) ^{\frac{e}{x}}}{x^2}  $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$\frac{e^{e+1}}{8}$</font>
+ </details>
+ </br>
+</blockquote>
+<p>$\mathrm{Eg}3.$&emsp;<font size=4>$\underset{n\rightarrow \infty}{\lim}\left( \left( \left( n+1 \right) ! \right) ^{\frac{1}{n+1}}-\left( n! \right) ^{\frac{1}{n}} \right)   $ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$\frac{1}{e}$</font>
+ </details>
+ </br>
+</blockquote>
+<h5 id="4-emsp-未定式-1-infty-1-infty-型"><a href="#4-emsp-未定式-1-infty-1-infty-型" class="headerlink" title="$4.$&emsp;未定式$1^{\infty} -1^{\infty}$型."></a>$4.$&emsp;未定式$1^{\infty} -1^{\infty}$型.</h5><p>$\mathrm{Eg}1.$&emsp;<font size=4>$ \underset{x\rightarrow 0}{\lim}\frac{\left( 1+x \right) ^{\frac{1}{x}}-\left( 1+2x \right) ^{\frac{1}{2x}}}{x}$ </font></p>
+<blockquote>
+ </br>
+ <details><summary><font color = green>解</font></summary></br>
+ <font color = green>$\frac{e}{2}$</font>
+ </details>
+ </br></blockquote>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -425,6 +319,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
