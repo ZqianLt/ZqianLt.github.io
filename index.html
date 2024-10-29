@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo</title>
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
+    <title>スズラン の Garden.</title>
+    <meta name="author" content="Zqian-LT" />
+    <meta name="description" content="A secret home where I can relax." />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
@@ -35,6 +35,11 @@
 <script src="/js/lib/highlight.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
 
 <script src="/js/lib/preview.js"></script>
 
@@ -61,7 +66,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>HEXO</span>
+            <span>スズラン の GARDEN.</span>
         </a>
         
         <a href="/">
@@ -71,12 +76,22 @@
         
         <a href="/about">
             <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
+            <span>&ensp;About ZqianLT</span>
         </a>
         
         <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/Suzuran%20Aim%20Cup">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Suzuran Aim Cup</span>
+        </a>
+        
+        <a href="/group">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Event</span>
         </a>
         
         <a href="/categories">
@@ -93,7 +108,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;スズラン の GARDEN.</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -112,7 +127,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About ZqianLT</div>
                     </div>
                 </a>
                 
@@ -122,6 +137,24 @@
                             <i class="fa-solid fa-box-archive fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/Suzuran%20Aim%20Cup">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Suzuran Aim Cup</div>
+                    </div>
+                </a>
+                
+                <a href="/group">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Event</div>
                     </div>
                 </a>
                 
@@ -165,9 +198,9 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>Hexo</h1>
-                <h3></h3>
-                <h5></h5>
+                <h1>スズラン の Garden.</h1>
+                <h3>by Zqian-LT</h3>
+                <h5>A secret home where I can relax.</h5>
             </div>
         </span>
     </div>
@@ -241,9 +274,9 @@
         <div class="avatar">
             <img src="/images/avatar.jpg" alt="avatar" />
         </div>
-        <div class="name">John Doe</div>
+        <div class="name">Zqian-LT</div>
         <div class="description">
-            <p>Description<br>…</p>
+            <p>Hello? </p>
 
         </div>
         
@@ -251,7 +284,11 @@
         <div class="friend-links">
             
             <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
+                <a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/17908675">-Hokusai-</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/11000965">Zqian-LT</a>
             </div>
             
         </div>
@@ -267,11 +304,11 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 Hexo
+            2022 - 2024 スズラン の Garden.
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;John Doe
+            &commat;Zqian-LT
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
