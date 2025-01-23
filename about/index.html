@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>About me | Heýssukai.</title>
+    <meta name="author" content="Zqian-LT" />
+    <meta name="description" content="A secret home where I can relax." />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEÝSSUKAI.</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEÝSSUKAI.</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>About me</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/14
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="Hi"><a href="#Hi" class="headerlink" title="Hi?"></a><center>Hi?</center></h1><hr>
+<blockquote>
+ </br>
+ <center><font size="5" face="Times New Roman"><b>I'm Zqian-Lt.</b></font></center>
+ <center><font size="4" face="Times New Roman">This is my personal website. Whenever I have some free time, I will write something here.</font></center>
+ <center><font size="4" face="Times New Roman">A lot of this is my negative emotions.</font></center>
+ <center><font size="4" face="Times New Roman">Of course, maybe I don't know how you found this site $:)$.</font></center>
+ </br>
+ <center><font color = green></font></center>
+ </br></blockquote>
+<hr>
+</br>
+
+<h4 id="Q1-Why-I-like-Eyjafjalla？"><a href="#Q1-Why-I-like-Eyjafjalla？" class="headerlink" title="Q1 Why I like Eyjafjalla？"></a><font face="Century Gothic">Q1 Why I like Eyjafjalla？</font></h4><blockquote>
+<p> <font size="3" face="Times New Roman">first, she is so cute😊, but why is she deaf ?😭</font><br> <font size="3" face="Times New Roman">n also hope to become an excellent scientific researcher like her.</font></p>
+<p> <font size="3" face="Monotype Corsiva">your parents will bless you in heaven.</font><br> <font size="3" face="Times New Roman">to Adele Naumann.(My cute sheep)💌🐏🐏</font><br> <a><img src="https://s2.loli.net/2025/01/24/UfVSA3IHP8jpMr7.png" ></a></p>
+</blockquote>
+<h4 id="Q2-Why-I-like-Suzuran？"><a href="#Q2-Why-I-like-Suzuran？" class="headerlink" title="Q2 Why I like Suzuran？"></a><font face="Century Gothic">Q2 Why I like Suzuran？</font></h4><blockquote>
+<p> <font size="3" face="Times New Roman">I grew up with many regrets in my childhood.😞</font><br> <font size="3" face="Times New Roman">It was only when I started to yearn for it that I realized it had already slipped beyond my grasp.😞</font><br> <font size="3" face="Times New Roman">only now, when I’m not happy with my life, do I realize how much I took my childhood for granted.</font><br> <font size="3" face="Times New Roman">I miss my childhood playmates, I miss the home I used to live in, and I miss my grandfather. Fucking COVID-19 took him away last year, and we never even got to see each other one last time.😭</font><br> <font size="3" face="Times New Roman">is there really no time machine in this world? What should I do to go back to 10 years ago?</font><br> <font size="3" face="Monotype Corsiva">and oh, Ms. Suzuran, you’re such a lovely little girl. You always make me reminisce about those happy times.😜🦊🦊</font><br> <a><img src="https://s2.loli.net/2025/01/24/oOJErGMizlkt831.png" ></a></p>
+</blockquote>
+<hr>
+<p><font size="5" face="Century Gothic"><b>Special thanks</b></font> <font size="3" face="Times New Roman">(In order of last update)</font></p>
+<p>1.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/17908675">-Hokusai-</a><br>2.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/6701104">Nene Sakura</a><br>3.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/10387920">life long</a>、<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/9794030">SIyuyuko</a><br>4.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/9740698">Eta UMa</a><br>5.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/14882634">iFroze</a>、<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/34323353">-Rosmontis-</a><br>6.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/22414293">Luval</a>、<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/16954810">katoumi</a><br>7.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/15349720">NaughtyChas</a><br>8.<a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/32445382">-Migita Suzu-</a></p>
+</br>
+
+<hr>
+<h1 id="Contact-me"><a href="#Contact-me" class="headerlink" title="Contact me"></a><font size="5" face="Times New Roman">Contact me</font></h1><table>
+<thead>
+<tr>
+<th align="center">Info</th>
+<th align="center">Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">QQ</td>
+<td align="center">2284264141</td>
+</tr>
+<tr>
+<td align="center">osu!</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/11000965">Zqian-LT</a></td>
+</tr>
+<tr>
+<td align="center">MIDIShow</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.midishow.com/u/Zqian-LT">Zqian-LT</a></td>
+</tr>
+<tr>
+<td align="center">Discord</td>
+<td align="center">Suzuran109</td>
+</tr>
+<tr>
+<td align="center">Email</td>
+<td align="center"><a href="mailto:&#107;&#111;&#x69;&#115;&#x65;&#114;&#x61;&#110;&#64;&#x66;&#x6f;&#x78;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">koiseran@foxmail.com</a></td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 Heýssukai.
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Zqian-LT
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            
+            
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang=""
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>

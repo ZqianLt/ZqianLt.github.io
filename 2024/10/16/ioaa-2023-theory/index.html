@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>2023 IOAA Theory (En-ver) | Heýssukai.</title>
+    <meta name="author" content="Zqian-LT" />
+    <meta name="description" content="A secret home where I can relax." />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEÝSSUKAI.</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEÝSSUKAI.</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>2023 IOAA Theory (En-ver)</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/16
+        </span>
+        
+        <span class="category">
+            <a href="/categories/IOAA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                IOAA
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/IOAA/" style="color: #00bcd4">
+                    IOAA
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h5 id="Problem-1：Neptune"><a href="#Problem-1：Neptune" class="headerlink" title="Problem 1：Neptune."></a>Problem 1：Neptune.</h5><p>Given that Neptune will be at opposition on 21 September 2024, calculate in which year Neptune was last at opposition near the time of the nort hern-hemisphere spring equinox. Assume that the orbits of Earth and Neptune are circular.</p>
+<p align="right" >$(5points)$</p>
+
+<h5 id="Problem-2：Magnetic-field"><a href="#Problem-2：Magnetic-field" class="headerlink" title="Problem 2：Magnetic field."></a>Problem 2：Magnetic field.</h5><p>An emission line of wavelength $ \lambda &#x3D;600nm $ was observed in the spectrum of a white dwarf.Assuming that it originates from the interaction of a free non-relativistic electron with a magnetic field</p>
+<p>$(a).$ calculate the magnetic flux density of the field;</p>
+<p>$(b).$ estimate the wavelength of another spectral line, the discovery of which could confirm that the lines originate from particles of a plasma interacting with the magnetic field.</p>
+<p align="right" >$(5points)$</p>
+
+<span id="more"></span>
+
+<h5 id="Problem-3：Microlensing"><a href="#Problem-3：Microlensing" class="headerlink" title="Problem 3：Microlensing."></a>Problem 3：Microlensing.</h5><p>A faint subdwarf star $I&#x3D;20.4\mathrm{mag}$ in the Galactic bulge was observed to brighten to $I\prime&#x3D;15.2\mathrm{mag}$ as a result of gravitational microlensing, allowing a high-resolution spectrum to be obtained with the UVES spectrograph on the Very Large Telescope (mirror diameter $8.2 m$).</p>
+<p>Estimate the diameter of the telescope needed to obtain a spectrum of the same quality with the same instrument and exposure time for this star at its normal apparent brightness. The fiber aperture is small enough so that the sky background is negligible.</p>
+<p align="right" >$(5points)$</p>
+
+<h5 id="Problem-4：Europa"><a href="#Problem-4：Europa" class="headerlink" title="Problem 4：Europa."></a>Problem 4：Europa.</h5><p>Assuming that the ice covering the ocean on Jupiter’s moon Europa is 6 km thick, that the surface temperature on the night side of Europa is $100 K$ and that the temperature at the ice-water boundary is $273 K$, calculate the total power corresponding to the heat emitted from the interior of this moon.</p>
+<p>On Earth, the mean geothermal heat flux measured at the continental surface is $70\times 10^{-3}\mathrm{Wm}^{-2}$ and originates mainly from radioactive decay. Is the heat emanating from the interior of Europa more likely to come from radioactive decay or tidal forces? Assume that Earth and Europa have a similar isotopic composition. (Select the correct answer on the answer sheet and show your working.)</p>
+<p align="right" >$(10points)$</p>
+
+<blockquote>
+<p> Notes: the heat passing through a wall with a surface area $S$ and thickness $d$ in time $t$ is described by the formula:<br> <center> $Q&#x3D;\lambda S\Delta Tt&#x2F;d$ </center><br> where $\lambda$ stands for thermal conductivity and $\Delta T$ for the temperature difference.<br> The thermal conductivity of ice $\lambda &#x3D;3Wm^{-1}K^{-1}$. The mass and radius of Europa are $4.8\times 10^{22}kg$ and $1561 km$.</p>
+</blockquote>
+<h5 id="Problem-5：Dark-Energy"><a href="#Problem-5：Dark-Energy" class="headerlink" title="Problem 5：Dark Energy."></a>Problem 5：Dark Energy.</h5><p>Observations indicate that the expansion of the Universe is accelerating. Fluctuations of the cosmic microwave background favour a flat (Euclidean) geometry, in which the total mass density (i.e. density of matter and equivalent mass density of all forms of energy) should be equal to the so-called critical density:</p>
+<center> $ \rho _{\mathrm{cr}}=\frac{3H_{0}^2}{8\pi G} $ </center>
+
+<p>where $H_0$ is the present value of the Hubble constant. However, the total density of matter (luminous and dark) is estimated at</p>
+<center> $ \rho _{\mathrm{m},0}\approx 2.8\cdot 10^{-27}kg\,\,m^{-3} $ </center>
+
+<p>To resolve this discrepancy, the standard cosmological model assumes that the Universe is filled with a mysterious ‘dark energy’ of constant energy density $\varepsilon _{\Lambda}$.</p>
+<p>Determine the value of $\varepsilon _{\Lambda}$ and calculate for which redshift in the past the energy density equivalent to matter was equal to the density of dark energy. Neglect the contribution of electromagnetic radiation.</p>
+<p align="right" >$(12points)$</p>
+
+<h5 id="Problem-6：Bolometer"><a href="#Problem-6：Bolometer" class="headerlink" title="Problem 6：Bolometer."></a>Problem 6：Bolometer.</h5><p>The entrance cavity of a particular bolometer is a cone with an opening angle of $30\degree$ , the surface of which has an energy absorption coefficient of $a&#x3D;0.99$ . Assume that there is no scattering of the incident radiation on the walls of the cavity, only multiple mirror-like (specular) reflections.The bolometer is connected to a cooler which keeps the bolometer cavity surface at practically $0 K$ temperature. The instrument is orbiting at 2 au from the Sun and is pointed directly at the centre of the Solar disk.</p>
+<p>Calculate the temperature of a black body which would radiate the same amount of energy from a unit surface area as the bolometer opening does per unit surface area.</p>
+<blockquote>
+<p> Note: the opening angle is defined as twice the angle between the axis of the cone and its generatrix.</p>
+</blockquote>
+<p align="right" >$(13points)$</p>
+
+<h5 id="Problem-7：Libration"><a href="#Problem-7：Libration" class="headerlink" title="Problem 7：Libration."></a>Problem 7：Libration.</h5><p>As a result of libration, studied among others by Johannes Hevelius, more than half of the Moon’s surface can be observed from Earth. Assume that the observer is geocentric.</p>
+<p>$(a).$ Estimate $\phi _B$,the maximum angle of libration in latitude. The axial tilt (obliquity) of the Moon with respect to its orbital plane is $\alpha &#x3D;6\degree41^{\prime}$.</p>
+<p>$(b).$ Estimate $\phi _L$, the maximum angle of libration in longitude. Assume that the Moon is always aligned with the same side facing towards the second focus F2 of its orbit, and that the eccentricity of the Moon’s orbit e changes between $0.044$ and $0.064$ on a timescale of several months.</p>
+<p>$(c).$ Estimate the fraction of the Moon’s surface which can be seen from Earth.</p>
+<p>$(d).$ Calculate how many months (lunations) are needed for an observer to see the Moon’s surface determined in part $(c)$.</p>
+<p align="right" >$(20points)$</p>
+
+<h5 id="Problem-8：Neutrinos"><a href="#Problem-8：Neutrinos" class="headerlink" title="Problem 8：Neutrinos."></a>Problem 8：Neutrinos.</h5><p>In a simplified model of a supernova explosion, the core of a star, composed of pure iron $ \mathrm{Fe} $ nuclei with a total mass of $1 M_{\odot}$, changes into a neutron star composed of individual electrons, protons and neutrons in numerical proportions of $1:1:8$. This process is called ‘neutronization’ and results in the emission of a large number of neutrinos.</p>
+<p>Calculate the solar neutrino flux on Earth. How much larger would the flux of neutrinos reaching the Earth from the supernova be than the steady neutrino emission of the Sun, if the supernova exploded in the centre of the Galaxy and the process of neutronization of the core took about $0.01 s$ ? Give an order-of-magnitude answer.</p>
+<p align="right" >$(20points)$</p>
+
+<h5 id="Problem-9：Second-eclipse"><a href="#Problem-9：Second-eclipse" class="headerlink" title="Problem 9：Second eclipse."></a>Problem 9：Second eclipse.</h5><p>For each of two eclipsing binary systems, Bolek and Lolek, the primary eclipses were observed with very high cadence as depicted below:</p>
+<p><a><img src="https://s2.loli.net/2024/10/19/P5TOsnpm2oXA3VF.png" ></a></p>
+<p><a><img src="https://s2.loli.net/2024/10/19/Ab8v51gJOmFaDEU.png" ></a></p>
+<p>In the figures, $t$ is the time in hours relative to the moment of minimum and $V$ is the brightness in the $V$ (visible) band in magnitudes. The points are the measurements and the line is the fitted model of the shape of the eclipse.</p>
+<p>You can assume that in both cases the eclipses are central ($i&#x3D;90\degree$) and last for a very small fraction of the orbital period, limb darkening is negligible, and the orbits have low eccentricity.</p>
+<p>On the Answer Sheet, draw the predicted shape of the light curve for each of the secondary eclipses. Write down the equations and calculations leading to your predictions.</p>
+<p align="right" >$(20points)$</p>
+
+<h5 id="Problem-10：Aldebaran"><a href="#Problem-10：Aldebaran" class="headerlink" title="Problem 10：Aldebaran."></a>Problem 10：Aldebaran.</h5><p>On 9 March 1497, Nicolaus Copernicus observed the occultation of Aldebaran by the Moon from Bologna. In his work $De~revolutionibus ~orbium ~cœlestium$ (Book VI, Chapter 27) Copernicus described the event: “I saw the star touching the dark edge of the Moon and disappearing at the end of the 5th hour of the night between the horns of the Moon, closer to the south horn by a third of the Moon’s diameter.”</p>
+<p>Assuming that the occultation was observed on the local meridian, that at maximum occultation Aldebaran was $0.32^{\prime}$ above the southern edge of the Moon, and that the apparent angular diameter of the Moon as seen from Bologna was $31.5^{\prime}$ , solve the following tasks:</p>
+<p>$(a).$ Find the latitude $\varphi _1$ of a place with the same longitude as Bologna, from which Aldebaran would have appeared to pass behind the centre of the Moon.</p>
+<p>$(b).$ Find the duration of the occultation as seen from latitude $\varphi _1$ if Aldebaran appeared to pass along the diameter of the lunar disk. For simplicity, also assume that the Moon and the observer are moving linearly at constant speed, that the Moon’s orbit is circular and that the declination of the Moon does not change during the occultation.</p>
+<p>$(c).$ Find the topocentric angular velocity of the Moon against the background stars during the occultation for an observer at latitude $\varphi _1$ , in arcmin&#x2F;hour, applying the same assumptions as in part $(b).$.</p>
+<p>$(d).$ Estimate the range of the Moon’s topocentric angular velocities (against the background stars) in arcmin&#x2F;hour at latitude $\varphi _1$, assuming a circular orbit. Show how this result can be justified by expressing the relative velocity of the Moon and observer in terms of their velocity vectors.</p>
+<p>The declination of Aldebaran was $\delta _{\mathrm{A}}&#x3D;15.37\degree$ in 1497 (due to precession), and the latitude of Bologna is $\varphi _{\mathrm{B}}&#x3D;44.44\degree\mathrm{N}$.</p>
+<p align="right" >$(25points)$</p>
+
+<h5 id="Problem-11：X-ray-emission-from-galaxy-clusters"><a href="#Problem-11：X-ray-emission-from-galaxy-clusters" class="headerlink" title="Problem 11：X-ray emission from galaxy clusters."></a>Problem 11：X-ray emission from galaxy clusters.</h5><p>Clusters of galaxies are strong X-ray sources. It has been established that the emission mechanism is thermal bremsstrahlung (free-free radiation) from a hot hydrogen and helium plasma inside the cluster. The luminosity $L_X$ (in Watts) of each component of the plasma is described by the formula:</p>
+<center> $ L_X=6\times 10^{-41}N_eN_XT^{\frac{1}{2}}V\,\,Z_{X}^{2} $ </center>
+
+<p>where the symbols represent:</p>
+<p>&emsp;&emsp;$X$ − Hydrogen ($\mathrm{H}$) or Helium ($\mathrm{He}$)<br>&emsp;&emsp;$N_e$ − number density of electrons $\left[ \mathrm{m}^{-3} \right]$<br>&emsp;&emsp;$N_X$ − number density of ions $X$ $\left[ \mathrm{m}^{-3} \right]$<br>&emsp;&emsp;$Z_X$ − atomic number of ion $X$<br>&emsp;&emsp;$T$ − temperature of the plasma $[K]$<br>&emsp;&emsp;$V$ − volume occupied by the plasma $\left[ \mathrm{m}^3 \right] $ </p>
+<p>$(a).$ Determine the total mass (in solar masses) of the plasma which emits the X-rays, assuming that:</p>
+<ul>
+<li>the plasma is fully ionized with 1 helium ion for every 10 hydrogen ions;</li>
+<li>$L_{\mathrm{total}}&#x3D;1.0\times 10^{37}\mathrm{W}$;</li>
+<li>$T&#x3D;80\times 10^6\mathrm{K}$;</li>
+<li>the plasma is uniformly distributed in a sphere of radius $R &#x3D; 500kpc$;</li>
+<li>self-absorption is negligible.</li>
+</ul>
+<p align="right" >$(16points)$</p>
+
+<p>The photons of the cosmic microwave background (CMB) interact with plasma in a process known as inverse Compton scattering. The CMB normally has a thermal blackbody spectrum at a temperature of $2.73 \mathrm{K}$. However, interaction with the plasma leads to distortion of the CMB spectrum (known as the Sunyaev–Zeldovich effect).</p>
+<p>$(b).$ Estimate the mean free path of CMB photons in the plasma, i.e. the average distance travelled by a photon before interacting with an electron. Express it in Mpc.The effective cross section for photon–electron interactions is $\sigma &#x3D;6.65\times 10^{-29}\mathrm{m}^2$.</p>
+<p align="right" >$(5points)$</p>
+
+<p>$(c).$ Estimate the typical energy of CMB photons.</p>
+<p align="right" >$(3points)$</p>
+
+<p>$(d).$ The energy of CMB photons can be increased by a factor of up to $\left( 1+\beta \right) &#x2F;\left( 1-\beta \right)$ due to the inverse Compton scattering, where $v&#x3D;\beta c$ is the velocity of electrons. Estimate the energy of scattered CMB photons. </p>
+<p align="right" >$(6points)$</p>
+<p align="right" >$(\mathrm{Total}: 30 points)$</p>
+
+<h5 id="Problem-12：DART"><a href="#Problem-12：DART" class="headerlink" title="Problem 12：DART."></a>Problem 12：DART.</h5><p>$(a).$ Calculate the expected orbital period change (in minutes), assuming that the collision was head-on, central, and perfectly inelastic.</p>
+<p>Assume that before the impact Dimorphos orbited Didymos on a circular orbit with a period of $P &#x3D; 11.92h$ . The masses of Dimorphos and Didymos are $m&#x3D;4.3\times 10^9\mathrm{kg}$ and $M&#x3D;5.6\times 10^{11}\mathrm{kg}$,respectively. The mass and speed of the $\mathrm{DART}$ spacecraft relative to Dimorphos at a moment of impact were $m_{\mathrm{s}}&#x3D;580\mathrm{kg}$ and $v_{\mathrm{s}}&#x3D;6.1\mathrm{kg} \mathrm{s}^{-1}$ .Neglect the gravitational influence of other bodies.</p>
+<p align="right" >$(20points)$</p>
+
+<p>$(b).$ In reality, the orbital period of Dimorphos was observed to be changed by $\Delta P_0&#x3D;-33\min $.This is due to the momentum transfer associated with the recoil of the ejected debris: the spacecraft was absorbed by the asteroid, but the impact excavated some material from the asteroid and ejected it into space. Calculate the momentum of the ejected debris and express it as a fraction of the momentum of Dimorphos before the collision. You can assume that the mass of the ejected material is much smaller than the mass of Dimorphos.</p>
+<p align="right" >$(15points)$</p>
+
+<p>$(c).$ Calculate the velocity change (in $\mathrm{mm} \mathrm{s}^{-1}$) of Dimorphos as a result of the impact, taking into account the effect of the ejected debris.</p>
+<p align="right" >$(5points)$</p>
+<p align="right" >$(\mathrm{Total}: 40 points)$</p>
+
+<h5 id="Problem-13：LISA"><a href="#Problem-13：LISA" class="headerlink" title="Problem 13：LISA."></a>Problem 13：LISA.</h5><p>The Laser Interferometer Space Antenna (LISA) is a proposed experiment to detect low-frequency gravitational waves. It consists of three spacecraft arranged in an equilateral triangle. A passing gravitational wave changes the distance between the spacecraft, which can be precisely measured (more details are given in the notes below).</p>
+<p>One of the sources of low-frequency gravitational waves are compact binary star systems, for example binary white dwarfs. Such a system was recently discovered at a distance of $2.34 \mathrm{kpc}$ from the Sun. The orbital period of the binary was found to be $414.79 s$ and is changing at a rate of $-7.49\times 10^{-4}\mathrm{s} \mathrm{yr}^{-1}$ due to the emission of gravitational waves.</p>
+<p>$(a).$ Check if this binary system can be detected by LISA. </p>
+<p align="right" >$(25points)$</p>
+
+<p>$(b).$ Calculate the chirp mass. </p>
+<p align="right" >$(5points)$</p>
+
+<p>$(c).$ Determine the masses of both components knowing that the ratio between the radius of one of the components to the semi-major axis of the orbit is $0.139$, and assuming both components follow the mass–radius relation for white dwarfs given in the table below.</p>
+<p align="right" >$(15points)$</p>
+<p align="right" >$(\mathrm{Total}: 45 points)$</p>
+
+<blockquote>
+<p> Note: 1.A binary star system with an orbital period $P$ emits gravitational waves with a frequency of $f&#x3D;2&#x2F;P$.<br> &emsp;&emsp;2.LISA measures a dimensionless quantity called the characteristic strain amplitude, S, given by<br> <center> $ S&#x3D;h\sqrt{fT_{\mathrm{obs}}} $ </center><br> where $ T_{\mathrm{obs} }&#x3D; 4 \mathrm{yr}$  is the expected duration of the mission. $h$ is the gravitational wave strain, given by:<br> <center> $ h&#x3D;\frac{2\left( G\mathcal{M} \right) ^{5&#x2F;3}\left( \pi f \right) ^{2&#x2F;3}}{c^4D}$ </center><br> where $\mathcal{M} $ is the so-called chirp mass,$f$ is the frequency of the gravitational wave and $D$ is the distance to the system. If we denote the masses of the components of the binary as $M_1$ and $M_2$ ,then the chirp mass is given by:<br> <center> $ \mathcal{M} &#x3D;\frac{\left( M_1M_2 \right) ^{3&#x2F;5}}{\left( M_1+M_2 \right) ^{1&#x2F;5}} $ </center><br> The expected sensitivity of LISA as a function of a gravitational wave frequency is presented on the figure below.<br> &emsp;&emsp;3.The semi-major axis $a$ of the binary system changes due to the emission of gravitational waves at a rate:<br> <center> $ \frac{\Delta a}{\Delta t}&#x3D;-\frac{64}{5}\frac{G^3}{c^5}\frac{M_1M_2\left( M_1+M_2 \right)}{a^3} $ </center> </p>
+</blockquote>
+<p><a><img src="https://s2.loli.net/2024/10/19/RNhH4bAMd6UCItZ.png" ></a></p>
+<p><a><img src="https://s2.loli.net/2024/10/19/s2OyZn7RUVE38Bt.png" ></a></p>
+</br>
+</br>
+</br>
+
+
+<hr>
+</br>
+
+<blockquote>
+<p> 1.<a target="_blank" rel="noopener" href="https://ioaa2023.pl/">IOAA2023</a></br><br> 2.<a target="_blank" rel="noopener" href="https://www.ioaastrophysics.org/">IOAA</a></br></p>
+</blockquote>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 Heýssukai.
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Zqian-LT
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            
+            
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang=""
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>2024 IOAA Theory (En-ver)[updating] | Heýssukai.</title>
+    <meta name="author" content="Zqian-LT" />
+    <meta name="description" content="A secret home where I can relax." />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEÝSSUKAI.</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEÝSSUKAI.</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>2024 IOAA Theory (En-ver)[updating]</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/18
+        </span>
+        
+        <span class="category">
+            <a href="/categories/IOAA/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                IOAA
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/IOAA/" style="color: #ffa2c4">
+                    IOAA
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h5 id="Problem-1：Sundial"><a href="#Problem-1：Sundial" class="headerlink" title="Problem 1：Sundial."></a>Problem 1：Sundial.</h5><p>The following diagram represents a sundial, for which the triangle, called a gnomon, casts a shadow onto the surrounding surface, which has markings and numbers representing important information. It is known that this sundial is located either between the Tropic of Cancer and the Arctic Circle or between the Tropic of Capricorn and the Antarctic Circle.</p>
+<p><a><img src="https://s2.loli.net/2024/10/18/CcOjMIT3lbdphx7.png" ></a></p>
+<span id="more"></span>
+
+<p>In the image above, the angle between the dashed and solid lines for any given time is always equal to the longitude difference between the time shown by the sundial and the civil time (the time shown on your watch). For instance, the dashed line corresponding to 7h and the solid line corresponding to 7h form an angle equal to the longitude difference between the location of this sundial and the central meridian of the time zone.</p>
+<p>Throughout the year, the shadow of the tip of the gnomon is always between curves A and C.</p>
+<p>Read the following statements and indicate whether they are true or false. For each item, write a <strong>T</strong> on the answer sheet if you think the statement is true and an <strong>F</strong> if you think the statement is false. <strong>There is no need to explain your answers</strong></p>
+<p>$(a).$ This sundial will only function properly if it is located in the southern hemisphere.<br>$(b).$ Curve <strong>A</strong> represents the trajectory of the shadow of the tip of the gnomon throughout the winter solstice(in the hemisphere the sundial is located in).<br>$(c).$ Line <strong>B</strong> represents the trajectory of the tip of the gnomon’s shadow throughout the equinoxes.<br>$(d).$ The solid radial lines provide the mean local solar time.<br>$(e).$ The analemma shape around the dashed line corresponding to 12h shows the position of the tip of the gnomon’s shadow during the true solar noon at the central meridian of the time zone throughout the year.</p>
+<p align="right" >$(10points)$</p>
+
+<h5 id="Problem-2：Galaxy-Cluster"><a href="#Problem-2：Galaxy-Cluster" class="headerlink" title="Problem 2：Galaxy Cluster."></a>Problem 2：Galaxy Cluster.</h5><p>An astrophysical survey mapped all the galaxies in a small region of the sky, of angular diameter $\Delta \theta &#x3D;0.01\mathrm{rad}$ , where many galaxies seemed to be concentrated around the central area of the image. When the positions and redshifts of all the galaxies in this cluster were measured, an interesting distribution emerged, which is shown in the plot below.</p>
+<p><a><img src="https://s2.loli.net/2024/10/19/wN1WtZVoY6qnIQ2.png" ></a></p>
+<p>Using these observations, estimate the total mass of the galaxy cluster and express your answer in solar masses. Assume that this galaxy cluster is in dynamical equilibrium, with a root-mean-square redshift dispersion $\sigma _z&#x3D;\sqrt{\left&lt; \left( z-0.7 \right) ^2 \right&gt;}&#x3D;0.0005$.Feel free to make reasonable approximations when considering the average velocities, masses, and spatial distribution of the galaxies.</p>
+<p>Consider that the distance to $\bar{z}&#x3D;0.7$ in the standard cosmological model is $D_A&#x3D;1500\mathrm{Mpc}$.Ignore cosmological effects on the distance.</p>
+<p align="right" >$(10points)$</p>
+
+<h5 id="Problem-3：Galaxy-Cluster"><a href="#Problem-3：Galaxy-Cluster" class="headerlink" title="Problem 3：Galaxy Cluster."></a>Problem 3：Galaxy Cluster.</h5><p>A peculiar asteroid of mass, $m$ , was spotted at a distance,$d$, from a star with mass, $M$. The magnitude of the asteroid’s velocity at the time of the observation was $v&#x3D;\sqrt{\frac{GM}{d}}$, where $G$ is the universal gravitational constant. The distance is much larger than the radius of the star.</p>
+<p>For both of the following items, express your answers in terms of $M$,$d$, and physical or mathematical constants.<br>$(a).$ If the asteroid is initially moving exactly towards the star, how long will it take for it to collide with the star?</p>
+<p align="right" >$(8points)$</p>
+$(b).$ If the asteroid is instead initially moving exactly away from the star, how long will it now take for it to collide with the star?
+<p align="right" >$(2points)$</p>
+
+<h5 id="Problem-4：White-Dwarf"><a href="#Problem-4：White-Dwarf" class="headerlink" title="Problem 4：White Dwarf."></a>Problem 4：White Dwarf.</h5><p>The structure of a white dwarf is sustained against gravitational collapse by the pressure of degenerate electrons, a phenomenon explained by quantum physics and related to the Pauli Exclusion Principle for electrons. The equation of state of a gas made of non-relativistic degenerate electrons is the following:</p>
+<center> $ P=\left(\frac{3}{8\pi}\right)^{2/3} \frac{h^2}{5m_e}n_{e}^{5/3}$ </center>
+
+<p>For both of the following items, express your answers in terms of $M$,$d$, and physical or mathematical constants.</p>
+<p>where $n_e$ is the number of electrons per unit volume, which can be expressed in terms of the mass density $\rho $ using the dimensionless factor $\mu _e$ , the number of nucleons (protons and neutrons) per unit electron. Also consider that the central pressure can be described by this equation of state.</p>
+<p>In the condition of hydrostatic equilibrium, the pressure and gravitational forces balance each other at any distance $r$ from the centre of the star. This condition can be expressed by:</p>
+<center> $ \frac{\mathrm{d}P}{\mathrm{d}r}=-\frac{GM\left( r \right) \rho \left( r \right)}{r^2} $ </center>
+
+<p>where $M(r)$ is the mass contained in the sphere of radius $r$ , and $\rho \left( r \right) $ is the mass density of the star at a radius $r$.</p>
+<p>Assume that $m_p&#x3D;m_n$ ,the density of a white dwarf is roughly uniform, and the following approximation is valid at the surface of the star:</p>
+<center> $ \frac{\mathrm{d}P}{\mathrm{d}r}\left| r=R \right. \approx -\frac{P_c}{R} $ </center>
+
+<p>where $P_c$ is the pressure at the centre of the star, and $R$ the star radius.</p>
+<p>$(a).$ The relationship between the mass $M$ and the radius $R$ of a white dwarf can be written in the form:</p>
+<p align="right" >$(6points)$</p>
+
+<center> $ R=a\cdot M^b $ </center>
+
+<p>Find the exponent $b$ and determine the coefficient $a$ in terms of physical constants and $\mu _e$.</p>
+<p>$(b).$ Using the relationship found in the previous part, estimate the radius of a white dwarf made of fully ionised carbon $ (<em>{6}^{12} C)$ with a mass of $ M &#x3D; 1.0 M</em>\odot$.</p>
+<p align="right" >$(4points)$</p>
+
+<h5 id="Problem-5：CMB"><a href="#Problem-5：CMB" class="headerlink" title="Problem 5：CMB."></a>Problem 5：CMB.</h5><p>The Cosmic Microwave Background (CMB) is radiation emitted during the early Universe. It is reasonably homogeneous and isotropic, and well described by a black-body radiation spectrum. Its emission spectrum today has a peak at a temperature of approximately $T_{\mathrm{today}}\sim 3\mathrm{K}$ , as measured by the COBE satellite FIRAS instrument.</p>
+<p>$(a).$ What is the redshift $(z)$ at which the CMB spectrum has a peak at the infrared wavelength of $\lambda _{\mathrm{IR}}\sim 0.1\mathrm{mm} ?$</p>
+<p align="right" >$(3points)$</p>
+
+<p>$(b).$ By assuming a spatially flat, matter-dominated Universe, what is the age of the Universe corresponding to the redshift of the previous part?</p>
+<p align="right" >$(7points)$</p>
+
+<h5 id="Problem-6：Cluster-Photography"><a href="#Problem-6：Cluster-Photography" class="headerlink" title="Problem 6：Cluster Photography."></a>Problem 6：Cluster Photography.</h5><p>An astronomer takes pictures, in the $V$-band, of a faint celestial target, from a place with no light pollution.The selected target is the globular cluster Palomar 4, which has an angular diameter of $\theta &#x3D;72.0^{‘’}$ and a uniform surface brightness in the $V$-band of $m_V&#x3D;20.6 \mathrm{mag}&#x2F;\mathrm{arcsec} ^2 $ The observation equipment consists of one reflector telescope, with diameter $D&#x3D;305 \mathrm{mm}$ and f-ratio $f&#x2F;5$ , and a prime focus CCD with quantum efficiency $\eta &#x3D;80%$ and square pixels with size $\ell &#x3D;3.80\mu m$.</p>
+<p>Given data:<br>&emsp;&emsp;$V$-band central wavelength:$\mathrm{\lambda}_V&#x3D;550nm $<br>&emsp;&emsp;$V$-band bandwidth:$\Delta \mathrm{\lambda}_V&#x3D;88.0nm$<br>&emsp;&emsp;Photon flux for a 0-magnitude object in the $V$-band:$10000 \mathrm{counts}&#x2F;\mathrm{nm}&#x2F;\mathrm{cm}^2&#x2F;\mathrm{s}$</p>
+<p>$(a).$ Calculate the plate scale (the angle of sky projected per unit length of the sensor) of the observation equipment in arcmin&#x2F;mm.</p>
+<p align="right" >$(3points)$</p>
+
+<p>$(b).$ Estimate the number of pixels,$n_p$,covered by the cluster image on the CCD.</p>
+<p align="right" >$(4points)$</p>
+
+<p>$(c).$ With an exposure time of $t&#x3D;15 \mathrm{seconds}$, the astronomer obtains a signal-to-noise ratio of $S&#x2F;N&#x3D;225$. Compute the brightness of the sky at the observation site, knowing that the CCD has a readout noise (standard deviation) of 5 counts per pixel and dark noise of 6 counts per pixel per minute. Give your answer in $\mathrm{mag}&#x2F;\mathrm{arcsec}$. You may find useful:$\sigma _{RON}^{2}&#x3D;n_p\cdot 1\cdot RON^2$ and $\sigma _{DN}^{2}&#x3D;n_p\cdot DN\cdot t$.</p>
+<p align="right" >$(13points)$</p>
+
+<h5 id="Problem-7：Castaway"><a href="#Problem-7：Castaway" class="headerlink" title="Problem 7：Castaway."></a>Problem 7：Castaway.</h5><p>After surviving a shipwreck and reaching a small island in the southern hemisphere, a sailor had to estimate the island’s latitude using the Sun.</p>
+<p>However, due to poor eyesight, the sailor couldn’t see the night stars very well, so his best option was to rely on the Sun. He had no information about the date, but he realized the days were longer than the nights.</p>
+<p>$(a).$ The sailor noticed that on his first day on the island, the angle between the positions of sunrise and sunset on the horizon was $120\degree$.With this piece of information, determine the range of possible values for the latitude of the island. Neglect the daily motion of the Sun across the ecliptic.</p>
+<p align="right" >$(7points)$</p>
+
+<p>$(b).$ The angle between the positions of sunrise and sunset kept increasing daily. After 40 days, this angle was equal to $163\degree$. Estimate the latitude of the island. You may neglect the eccentricity of the Earth’s orbit.</p>
+<p align="right" >$(13points)$</p>
+
+<h5 id="Problem-8：Binary-Hardening"><a href="#Problem-8：Binary-Hardening" class="headerlink" title="Problem 8：Binary Hardening."></a>Problem 8：Binary Hardening.</h5><p>Consider a binary system of black holes, both of equal mass $M$,separated by a distance $a$, and revolving around their common centre of mass (CM) in circular orbits. This binary system moves against, and interacts with, a very large, uniform field of stars (each of mass $m\ll M$) with number density $n$ . Consider a star that approaches the system from infinity with speed $v$ and impact parameter $b$,in the reference frame of the CM (as shown in the figure below). Its closest approach distance to the CM is $r_p\approx \frac{1}{2}a$. For tasks (a) and (c), you should make use of the fact that $v^2\ll \frac{GM}{a}$.</p>
+<p><a><img src="https://s2.loli.net/2024/10/29/ji2VFqGvAnCBMLl.png" ></a></p>
+<p>$(a).$ Obtain an expression for $b$, in terms of $M$,$a$,$v$,and physical constants. In this task, assume that the star interacts with the binary as if its total mass was fixed at the CM.</p>
+<p align="right" >$(5points)$</p>
+
+<p>After a complex interaction with the binary, the star is slingshot from the system. The exact calculation of its ejection speed is complex, but the result can be estimated by considering that the star only interacts with one of the components when near the system. As such, consider, in part (b), only the gravitational interaction between the star and one of the components in the binary.</p>
+<p>$(b).$ The star approaches the component with an initial speed negligible compared to the component’s orbital speed, and both are moving directly towards each other. After interacting with the system, when the star is again far away from the black hole, we find that the direction of its velocity vector is reversed and the final speed is $v_f$ .Determine $v_f$, in terms of $M$,$a$, and physical constants. Assume that linear momentum and mechanical energy are conserved during this interaction and that it takes place in a timescale much smaller than the binary’s period. Recall that $m\ll M$.</p>
+<p align="right" >$(6points)$</p>
+
+<p>For the following task, assume that all stars approaching the system from infinity with an impact parameter $\frac{1}{2}b_0\leqslant b\leqslant \frac{3}{2}b_0$ (where $b_0$ is the impact parameter of a star whose speed at infinity is $v_0$) attain a closestapproach distance $r_p\approx \frac{1}{2}a$ to the CM.<strong>Also, assume that all stars exit the system with the speed found in (b)</strong>.</p>
+<p>$(c).$ Upon each encounter, part of the total energy of the binary is transferred to the kinetic energy of the star. Assume that the binary orbit remains circular. Knowing this, using your results from previous tasks, and taking into account only encounters with the stars within the specified range of impact parameters, show that the reciprocal of the binary’s separation increases at a constant rate:</p>
+<center>$\frac{\mathrm{d}}{\mathrm{d}t}\left( \frac{1}{a} \right) =H\frac{G_{\rho}}{v_0}$</center>
+
+<p>Here,$\rho &#x3D;nm$ is the mass density of the star field, and $G$ is the universal gravitational constant. Find the dimensionless constant $H$,which refers to hardening.</p>
+<p align="right" >$(14points)$</p>
+
+<h5 id="Problem-9：Physics-of-Accretion"><a href="#Problem-9：Physics-of-Accretion" class="headerlink" title="Problem 9：Physics of Accretion."></a>Problem 9：Physics of Accretion.</h5><p>The accretion of matter onto compact objects, such as neutron stars and black holes, is one of the most efficient ways to produce radiant energy in astrophysical systems. Consider an element of gas of mass $\Delta m$ in a stationary and geometrically thin disc of matter with a maximum radius of $R_{\max}$ and minimum stable orbital radius of $R_{\min}$($R_{\min}&#x2F;R_{\max}\ll 1$), in rotation around a compact object of mass $M$ and radius $R$.</p>
+<p align="right" >$(6points)$</p>
+
+<h5 id="Problem-10："><a href="#Problem-10：" class="headerlink" title="Problem 10：."></a>Problem 10：.</h5><p align="right" >$(20points)$</p>
+
+<h5 id="Problem-11："><a href="#Problem-11：" class="headerlink" title="Problem 11：."></a>Problem 11：.</h5><p align="right" >$(20points)$</p>
+
+<h5 id="Problem-12："><a href="#Problem-12：" class="headerlink" title="Problem 12：."></a>Problem 12：.</h5><p align="right" >$(60points)$</p>
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 Heýssukai.
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Zqian-LT
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            
+            
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang=""
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>
