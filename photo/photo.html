@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>About me | Heýssukai.</title>
+    <title>My love | Heýssukai.</title>
     <meta name="author" content="Zqian-LT" />
     <meta name="description" content="A secret home where I can relax." />
     <meta name="keywords" content="" />
@@ -46,6 +46,9 @@
 
 <script src="/js/lib/preview.js"></script>
 
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
 
 
 
@@ -168,7 +171,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>About me</h1>
+        <h1>My love</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -181,50 +184,20 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <hr>
-<h1 id="Contact-me"><a href="#Contact-me" class="headerlink" title="Contact me"></a><font size="5" face="Times New Roman">Contact me</font></h1><table>
-<thead>
-<tr>
-<th align="center">Info</th>
-<th align="center">Link</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Name</td>
-<td align="center">Xiuxiu Fu</td>
-</tr>
-<tr>
-<td align="center">QQ</td>
-<td align="center">2284264141</td>
-</tr>
-<tr>
-<td align="center">osu!</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://osu.ppy.sh/users/11000965">Zqian-LT</a></td>
-</tr>
-<tr>
-<td align="center">bilibili</td>
-<td align="center">鲤鱼泡温泉</td>
-</tr>
-<tr>
-<td align="center">MIDIShow</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.midishow.com/u/Zqian-LT">Zqian-LT</a></td>
-</tr>
-<tr>
-<td align="center">Twitter</td>
-<td align="center">Suzuran109💌💌💌</td>
-</tr>
-<tr>
-<td align="center">Discord</td>
-<td align="center">Suzuran109</td>
-</tr>
-<tr>
-<td align="center">Email</td>
-<td align="center"><a href="mailto:&#x6b;&#x6f;&#105;&#x73;&#x65;&#x72;&#97;&#110;&#x40;&#x66;&#x6f;&#x78;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">koiseran@foxmail.com</a></td>
-</tr>
-</tbody></table>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        data-encrypted="U2FsdGVkX18DjyJzxkfp9HU/ejFN0D3s1CnTga8RudGk/bfRNps0+lDr1N7gAKynLp8Eygdfhup/Pqf3fvX/qLbzwOILWylonPODAFRbb36Y0pwIC5PDdbjFMTw/rCUitgYtaJu8Cb1KZmuC1aYZLkk0JjMepIEkJOtj8mzhaAUWVDJXe2LX6nsvvFs4PH2X1aXtqan+f4t1oA+tF49W3G/Nv2A5zG4aTuA5+xM6Dr8="
+        data-shasum="6fc3be91d2bcfe59ceb2141ccc90aa4070388fe42b03a0c72b85670167762177"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
