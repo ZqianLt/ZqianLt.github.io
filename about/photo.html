@@ -47,6 +47,9 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
 
 
 
@@ -181,13 +184,20 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <h4 id="Suzuran"><a href="#Suzuran" class="headerlink" title="Suzuran"></a><font face="Century Gothic">Suzuran</font></h4><blockquote>
-</blockquote>
-<hr>
-<hr>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="文章被加密，请输入密码"
+        data-encrypted="U2FsdGVkX18zCFwWuXkQxygyl0G9AuYXVxTfRNkpcZZqdehIIn1mG1kmtbqqpUWiM1Ts6iLvgFG+LpGzeJbtAVcFAVL7xFpVL723oN1ZuIB6WNrGF7zc76p7XpV/ybv93m83oXCq7J6S8ivsGHChWud694PqfddVrbhgt/JnYqIaO04prIHJDo02JVRJDT4q73ZyRdOfA1INWDwNkmmi7V17v5H00imxRbbfLAkIUas="
+        data-shasum="6fc3be91d2bcfe59ceb2141ccc90aa4070388fe42b03a0c72b85670167762177"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
