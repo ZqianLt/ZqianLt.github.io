@@ -15,6 +15,7 @@
     <script type="text/javascript" async
         src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/es5/tex-mml-chtml.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -240,7 +241,7 @@
         
         <span class="tag">
             
-            <a href="/tags/QM/" style="color: #ff7d73">QM</a>
+            <a href="/tags/QM/" style="color: #00a596">QM</a>
         </span>
         
     </div>
@@ -293,7 +294,7 @@
         
         <span class="tag">
             
-            <a href="/tags/IOAA/" style="color: #00bcd4">IOAA</a>
+            <a href="/tags/IOAA/" style="color: #ffa2c4">IOAA</a>
         </span>
         
     </div>
@@ -351,11 +352,66 @@
         
         <span class="tag">
             
-            <a href="/tags/IOAA/" style="color: #00bcd4">IOAA</a>
+            <a href="/tags/IOAA/" style="color: #ffa2c4">IOAA</a>
         </span>
         
     </div>
     <a href="/2024/10/16/ioaa-2023-theory/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/06/23/echarts-test/">
+        <h2 class="post-title">ECharts 测试</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/23
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <div id="echarts4035" style="width: height=400;height: width=860px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts4035'));
+
+        // 指定图表的配置项和数据
+        var option = {
+  "title": { "text": "测试图表" },
+  "xAxis": { "data": ["A", "B", "C"] },
+  "yAxis": {},
+  "series": [{ "type": "bar", "data": [5, 10, 15] }]
+}
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%B5%8B%E8%AF%95/" style="color: #ffa2c4">测试</a>
+        </span>
+        
+    </div>
+    <a href="/2025/06/23/echarts-test/" class="go-post">阅读全文</a>
 </div>
 
 
@@ -406,7 +462,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2025 Heýssukai.
+            2022 - 2026 Heýssukai.
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
